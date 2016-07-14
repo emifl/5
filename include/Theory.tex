@@ -697,11 +697,31 @@ The basic equation of dynamics is based on Newtons second law of motion. So the 
 "Dynamic Relaxation was invented by \textit{ Alistar Day} in 1965 and is a numerical procedure that solves a set of nonlinear equations. Summarized, the technique traces the motion of the structure through time under applied load. The technique is effectively the same as the leapfrog and Verlet methods, which are also used to integrate Newton's second law through time.\\
 The basis of the method is to trace the step by step for small time increments, $\Delta t$, the motion of each interconnected node of the grid until the structure comes to rest in static equilibrium."
 
-A typical flow diagram of dynamic relaxation can look like this:
-Diagram...
+A typical flow diagram of dynamic relaxation can look like this. It is a modified version of one from Shell structures for architecture. That one is made for modelling a grid-shell so this one is a bit more general:
 
-It has been commonly used in engineering to find forms of equilibrium for membrane and shell structures. For the former the DR formulation is very dependent of the internal forces and the pretension its elements or boundaries. Shells on the other hand is very dependent of the external loads and has a dominant gravity force applied.Though you can really model any kind of loading as long at imposes a force on the nodes or particles.
+\begin{figure}[H]
+\centering
+\includegraphics[height=1.2\linewidth ]{figure/Theory/DRScheme.pdf}
+\caption{Flow diagram for Dynamic Relaxation }
 
+
+It has been commonly used in engineering to find forms of equilibrium for membrane and shell structures. For the former the DR formulation is very dependent of the internal forces and the pretension its elements or boundaries. Shells on the other hand is very dependent of the external loads and has a dominant gravity force applied.Though you can really model any kind of loading as long it imposes a force on the nodes or particles.
+
+\subsubsection{Combined form-finding and cutting patterns of tensile structures}
+
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth ]{figure/Theory/EqualMeshGeo.pdf}
+\caption{Flow diagram for Dynamic Relaxation }
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.0\linewidth ]{figure/Theory/SoapbubbleElement.pdf}
+\caption{Flow diagram for Dynamic Relaxation }
+\end{figure}
 
 
 \section{Shell Theory}
