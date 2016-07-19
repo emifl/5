@@ -5,7 +5,47 @@ In the following sections, examples of a figure, an equation, a table, a chemica
 
 \section{Structural theory of masonry structures}
 
-Masonry is a composition or assemblage of building elements. The most common types of these elements are stones and bricks. It can though be in any shape
+Masonry is a composition or assemblage of building elements. The most common types of these elements are stones and bricks. It can though be in any shape it can be done with or without mortar but the structural action is similar. According to Heyman it is wise to and convenient to regard a masonry building as a collection of dry stones or bricks that are placed on one another to to form a stable structure. The mortar cannot be accounted since it may have reduced its structural influence with time - it cannot be assumed to add strength to the construction. The stability of the structure relies on the compaction under the gravity of its components. "A general state of compressive stress exists, but only feeble tensions can be resisted."\\
+
+
+Speaking in terms of general design there are three main structural criterion's, those of \textit{strength, stiffness and stability}. The first implies that the material should resist the internal stresses and the second ensures not to high deflections. These criterion's are not the crucial regarding masonry structures, it is the stability that is of most concern.\\
+
+Heyman uses an masonry arch to illustrate this. The load applied on the load is it self-weight and an external point load. The stresses are low and the deflection negligible until a certain magnitude of the point load is reached and it collapses. The stresses are still low in the structure but the internal forces cannot be held inside the geometry of the arch. This leads to the formation of four hinges that turns the structure into a collapse mechanism.\\   
+
+Heyman imposes a method of based on plastic analysis for the structural design of masonry rather than the elastic analysis. One reason is that the elements of the arch for instance is rigid blocks and will not deform by themselves, and an elastic solution for that case is not possible. Another reason is that the plastic designer understands that there are several ways that the structure can handle the forces. Therefore the he or she uses the on of the three theorems of plasticity theory to avoid a collapse or structural failure. These are 
+
+\begin{itemize}
+\item The lower bound, or safe, theorem
+\item The upper bound, or unsafe, theorem
+\item The uniqueness theorem
+\end{itemize}
+
+This will be described more in detail later. To be able to apply the plastic theory masonry structures Heyman introduces three assumptions about the properties of the material:
+
+
+\textit{"(i) Stone has no tensile strength. This assumption is almost exactly true if a structure,
+like an arch, is under consideration, made up of voussoirs laid either dry or with very
+weak mortar. Although the stone itself may in fact have some tensile strength, the joints
+will not, and no tensile forces can be transmitted from one portion of the structure to
+another. The assumption of no tensile strength is, in accordance both with common sense
+and with the corollaries of the general principles established below, a safe assumption.
+It may be slightly too safe if the stone structure is not of the voussoir type, and if tensile
+forces can be transmitted by the interlocking of perhaps randomly oriented stones.}
+
+\textit{(ii) The general stress levels are so low that, for the purposes of calculation, the compressive
+strength of stone is effectively infinite. This is a slightly unsafe assumption, and
+will be discussed more fully later.}
+
+\textit{(iii) Sliding of one stone upon another cannot occur. This seems a reasonable assumption
+(it did to Coulomb, as noted above). It implies that wherever there is a weak plane, for
+example between voussoirs, the line of thrust should not depart too far from normality
+to that plane. (The collapse of Beauvais may have been initiated by sliding.)" }Stone Skeleton 660
+
+Heyman refer to the plastic and elastic designer. This kind of behaviour makes it questionable to rely entirely on the foundation of elastic theory there is correlation between stresses and deformation of the material, and when the yield stress is reached we cannot rely on the structure or component to be safe. 
+
+The structural assessment and design of masonry structures differs from conventional design of for instance steel and concrete. Elastic theory states that the material has a certain relationship between stresses and elongation of the material. When the structure has reached it yield limit based on the stresses in the structure we have reached a critical state and we can not assure the safety of the structure. In masonry structures the stresses are considerably low based on the material capacities. It could therefore be safe design based on elastic theory, but it could for unknown reasons collapse. 
+
+
 
 
 \subsection{Limit design}
@@ -13,23 +53,6 @@ Masonry is a composition or assemblage of building elements. The most common typ
 "For the purpose of establishing general principles and theorems, the following
 assumptions will be made about the properties of the,material :
 
-(i) Stone has no tensile strength. This assumption is almost exactly true if a structure,
-like an arch, is under consideration, made up of voussoirs laid either dry or with very
-weak mortar. Although the stone itself may in fact have some tensile strength, the joints
-will not, and no tensile forces can be transmitted from one portion of the structure to
-another. The assumption of no tensile strength is, in accordance both with common sense
-and with the corollaries of the general principles established below, a safe assumption.
-It may be slightly too safe if the stone structure is not of the voussoir type, and if tensile
-forces can be transmitted by the interlocking of perhaps randomly oriented stones.
-
-(ii) The general stress levels are so low that, for the purposes of calculation, the compressive
-strength of stone is effectively infinite. This is a slightly unsafe assumption, and
-will be discussed more fully later.
-
-(iii) Sliding of one stone upon another cannot occur. This seems a reasonable assumption
-(it did to Coulomb, as noted above). It implies that wherever there is a weak plane, for
-example between voussoirs, the line of thrust should not depart too far from normality
-to that plane. (The collapse of Beauvais may have been initiated by sliding.)" Stone Skeleton 66
 
 \begin{figure}[H]
 \centering
@@ -39,8 +62,29 @@ to that plane. (The collapse of Beauvais may have been initiated by sliding.)" S
 
 
 \subsection{Plasticity Theory}
+
+Plastic analysis is governed by three fundamental theorems which are valid for elasto-plastic structures in which the displacements are small such that the geometry of the displaced structure does not affect the applied loading system.
+
+\begin{itemize}
+\item The lower bound, or safe, theorem
+\item The upper bound, or unsafe, theorem
+\item The uniqueness theorem
+\end{itemize}
+
+
 \subsubsection{Lower Bound Theory}
+
+
+If a distribution of moments can be found which satisfies the above equilibrium and yield conditions the structure is either safe or just on the point of collapse.
 \subsubsection{Upper Bound Theory}
+
+
+If a loading is found which causes a collapse mechanism to form then the loading must be equal to or greater than the actual collapse load.
+
+Generally, in plastic analysis, the upper bound theorem is used. Possible collapse mechanisms are formulated and the corresponding collapse loads calculated. From the upper bound theorem we know that all mechanisms must give a value of collapse load which is greater than or equal to the true collapse load so that the critical mechanism is the one giving the lowest load. It is possible that a mechanism, which would give a lower value of collapse load, has been missed. A check must therefore be carried out by applying the lower bound theorem.
+
+
+
 
 \section{Tensor Analysis}
 
@@ -703,13 +747,21 @@ A typical flow diagram of dynamic relaxation can look like this. It is a modifie
 \centering
 \includegraphics[height=1.2\linewidth ]{figure/Theory/DRScheme.pdf}
 \caption{Flow diagram for Dynamic Relaxation }
-
+\end{figure}
 
 It has been commonly used in engineering to find forms of equilibrium for membrane and shell structures. For the former the DR formulation is very dependent of the internal forces and the pretension its elements or boundaries. Shells on the other hand is very dependent of the external loads and has a dominant gravity force applied.Though you can really model any kind of loading as long it imposes a force on the nodes or particles.
 
 \subsubsection{Combined form-finding and cutting patterns of tensile structures}
 
-\end{figure}
+Form finding a fabric structure with a soap film or minimal surface is done by setting the membrane stress components:
+
+\begin{equation}
+    n^{\alpha \beta} = Ta^{\alpha \beta}
+\end{equation}
+
+$T$ is the surface tension and $a^{\alpha \beta}$ is the metric tensor. In addition a geodesic coordinate system for generating the cutting pattern is obtained by imposing the conditions $a^{12} = 0$ and  $a^{22} = constant$
+
+
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.9\linewidth ]{figure/Theory/EqualMeshGeo.pdf}

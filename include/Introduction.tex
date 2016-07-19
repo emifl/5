@@ -78,7 +78,7 @@ In the book Shell structures for Architecture optimisation it distinguish betwee
 
 \begin{itemize}
 \item Freeform, free-curved or sculptural shells are generated without taking into consideration structural performance.  
-\item Mathematical, geometrical or analytical shells are directly described by analytical functions.These functions are of ten chosen for their convenience in performing further analytical calculations and their ability to describe a shell's shape for fabrication purposes.
+\item Mathematical, geometrical or analytical shells are directly described by analytical functions.These functions are of then chosen for their convenience in performing further analytical calculations and their ability to describe a shell's shape for fabrication purposes.
 \item Form Found shells include natural, hanging shapes assosiated with funicular structures of Antoni Gaudi, Frei Otto and Heinz Isler, but also "strained" gridshells tat feautre bending stresses. Their final shape is a result of attaining a state of static equilibrium.
 \end{itemize}
 
@@ -137,15 +137,51 @@ The use of concrete was invented by the Romans, who also refined the use of bric
 \end{figure}
 
 
-\subsubsection{History of Masonry Shells}
+\subsubsection{Modern Masonry Shells in Architecture}
+
+As mentioned section about shells it is a structural element defined by a curved surface that is thin in the direction of the normal. Early, if not the first, to master shell structures  was the Romans. Pantheon, built in early 2nd Century, is a great example of the Roman understanding of geometry and shells. It is built of concrete elements and with an oculus as a light source. The grid structure might be just decorative but it is possible to read as an understanding of that forces can be handled in both radial and angular direction of the dome.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.9\linewidth ]{figure/Introduction/roman_aq.jpg}
-\caption{http://light-earth.com/portfolio-items/mapunbubwe/}
-
+\includegraphics[width=0.9\linewidth ]{figure/Introduction/Pantheon1.jpg}
+\caption{Britannica image}
 \end{figure}
 
+
+The structures of vaults and domes has a strong position in most historic description of Architecture. Two names that stand out in modern time architecture in this genre are \textit{Rafael Guastavino} and \textit{Eladio Dieste}. They are seen as the main contributors to revolutionise the structural arts of masonry shells and take it into the modern era. 
+"Until late in the nineteenth century, masonry vaulting was shaped and proportioned by guesswork or rules of thumb. As a consequence, vaults based on the European or Middle Eastern precedents tended to be not only thick but also heavy and expensive. Catalan vaults were much thinner but were also designed by wholly intuitive methods."
+Instead of rely on intuition Guastavino used \textit{graphic statics} which was a relatively new method at the time to describe and understand force patterns of structures. Graphic statics made it possible to visualise the optimal shape of vaults and trusses. This in combination with the technique of catalan vaults made it possible to construct very slender structures. "Although Guastavino patented techniques for both reinforcing and post-tensioning, most of his roofs were constructed of unreinforced masonry"
+
+
+
+
+
+ John Oschendorf describs the legacy of the Guastavino Company \textit{"With complex three dimensional vaults, supported by carefully placed stiffening walls, flying buttresses, and tension ties, the Guastavinos worked as master masons in the modern era"} 
+
+\begin{figure}[H]
+\centering
+\includegraphics[height=0.4\linewidth ]{figure/Introduction/GuastovinoStair.jpg}
+\includegraphics[height=0.4\linewidth ]{figure/Introduction/GuastavinoStair2.jpg}
+\caption{Tile vaulted staircase of Baker Hall, Carnegie Mellon University, Pittsburgh, 1914. Courtesy of Michael Freeman.}
+\end{figure}
+
+Dieste did in comparison to Guastavino use formwork during construction and worked only with steel reinforced and often post tensioned structures.Instead of using Graphic Statics Dieste used numerical methods to design his structures. "Dieste’s building structures fall into four general categories, none of which was feasible in Guastavino’s time."
+
+\begin{itemize}
+
+\item Gaussian Vaults
+\item Self supporting shells
+\item Folded structures
+\item Ruled surfaces
+\end{itemize}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\linewidth ]{figure/Introduction/DiesteFour.JPG}
+\caption{The four categories of Dieste Eladio Dieste: innovation in structural art}
+\end{figure}
+
+"There were others as well who built with reinforced brickwork, but two things set Dieste’s work above the rest. One is his unmatched use of masonry in structures subject to bending, such as cantilevered barrel shells, tanks under hydrostatic pressure, and folded plates. The other is the power and poetry of his masonry architecture."
 
 
 \begin{figure}[H]
@@ -160,6 +196,90 @@ The use of concrete was invented by the Romans, who also refined the use of bric
 \includegraphics[width=0.9\linewidth ]{figure/Introduction/Block_Vault.jpg}
 \caption{Surface and contour plots showing $z(x,y)=\sin(x+y)\cos(2x)$.}
 \end{figure}
+
+\subsection{Geometrical Challenges}
+
+Travelling has been an important part of the human history and it almost feels like a part of our DNA to discover new horizons. Therefore one of the most common geometrical queries of today and the past might be \textit{"I want to go from A to B and how do I know where to go and which of all options are the best"}. An essential part in our lives is to relate our position and relating objects in space based on maps. The question is how to transform something three dimensional into two dimensions such as paper, this is known to be an impossible problem to solve. A solution to this problem was discovered by  \textit{Gerardus Mercator} in 1569, a so called \textit{Mercator Projection}. This is basically a method to project a sphere onto a cylinder that can be unrolled to a plane. This is of course not true since the projection becomes different depending on your distance to the equator, and the poles can not even be projected. 550 years later this method is still used in applications such as \textit{Google Maps}. So every time we search and evaluate our surroundings on Google Maps we actually are demanding a very difficult geometrical query. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth ]{figure/Introduction/Mercator.jpg}
+
+\caption{The length of the curve is the same regardless of coordinate system.}
+\end{figure}
+
+More hands on puzzles might be looking at a football or the jeans you are wearing and the cutting pattern made by the designer. Our the other way around how would you do a cutting pattern to something as irregular as the human body. The football is definitely simpler but still not easy with its mix of pentagons and hexagons, why cant you just make rectangle or squares?
+
+\begin{figure}[H]
+\centering
+\includegraphics[height=0.4\linewidth ]{figure/Introduction/Jeans.jpg}
+\includegraphics[height=0.4\linewidth ]{figure/Introduction/football.jpg}
+\caption{The length of the curve is the same regardless of coordinate system.}
+\end{figure}
+
+It might sound silly but these are problems for Architects and Engineers. How do we discretize a geometrical shape into building elements. We often would like to make a pattern in 2D and make it 3D for aesthetic and economical reasons, this way we could build everything in a one sized panel for instance. As for Mercator it is just not possible in theory to a direct transformation without distorting the image. The initially same sized squares become sewed and in different sizes.
+Two ways to tackle this is to use a module like brick where you can work with tolerances using mortar and accept a deviation from the theoretical shape. Another way is to to work closely with the mathematical discretization of the global form and the production of the local elements and only allow small deviations. \\
+Tensile structures are like the jeans you wear, it needs to be designed and cut correctly to look nice, and depending on the geometry it can be more or less complicated. Pioneer in this field is Frei Otto who started to eleboarate with textile and membrane structures. Below is an example from a contemporary project called Green Void by LAVA in Sydney.
+
+\begin{figure}[H]
+\centering
+\includegraphics[height=0.30\linewidth ]{figure/Introduction/GreenVoid2.jpg}
+\includegraphics[height=0.30\linewidth ]{figure/Introduction/GreenVoid1.jpg}
+\caption{The length of the curve is the same regardless of coordinate system.}
+\end{figure}
+
+The shape of the the ball and its discretization have some resemblance with the works of Buckminster Fuller which is especially known for developing the so-called geodesic dome. Ture Wester describes the generation of these structures but call it \textit{systematic triangulation of the regular polyhedra}. It is based on a subdivison of the icoshedra which is a platonic body.
+
+\begin{figure}[H]
+\centering
+\includegraphics[height=0.25\linewidth ]{figure/Introduction/TureW6Mod.pdf}
+\caption{The length of the curve is the same regardless of coordinate system.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[height=0.30\linewidth ]{figure/Introduction/fuller3.jpg}
+\includegraphics[height=0.30\linewidth ]{figure/Introduction/Eden.jpg}
+\caption{The length of the curve is the same regardless of coordinate system.}
+\end{figure}
+
+\subsubsection{Stereotomy }
+  
+Stereotomy is defined as "the science or art of cutting solids into certain figures or sections". It includes, and the term is sometimes used as a synonymous with, the art of cutting stones for masonry shells. From Notes of Stereotomy.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\linewidth ]{figure/Introduction/NotesonStereotomy.JPG}
+\includegraphics[width=0.45\linewidth ]{figure/Introduction/NotesonStereotomy2.JPG}
+\caption{The length of the curve is the same regardless of coordinate system.}
+\end{figure}
+
+It was used early as an tool for subdividing shapes into building elements that would be able to cut and fit together. Wellknown in this field is Philibert de l'Orme from France that was active during the 16 th century. Long before computers he managed to create astonishing structures and patterns of very complex surfaces.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.90\linewidth ]{figure/Introduction/Arles.jpg}
+\caption{The length of the curve is the same regardless of coordinate system.}
+\end{figure}
+
+This techniques are not very common today since it involves quite complex building elements that need to be manufactured. Though it is possible to read the research of the Block research group where they have investigated in how to use computational methods and digital fabrication to achieve this structures.
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[height=0.50\linewidth ]{figure/Introduction/StereoBlock2.JPG}
+\includegraphics[height=0.35\linewidth ]{figure/Introduction/StereoBlock.JPG}
+\caption{The length of the curve is the same regardless of coordinate system.}
+\end{figure}
+
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[height=0.4\linewidth ]{figure/Introduction/blockStereo.jpg}
+\caption{The length of the curve is the same regardless of coordinate system.}
+\end{figure}
+
 
 \subsection{Geometry in Architecture}
 
@@ -200,43 +320,6 @@ Both Fuller and Foster has expressed deep commitment in how their design can sha
 
 
 
-
-\subsubsection{Stereotomy }
-  
-Stereotomy is defined as "the science or art of cutting solids into certain figures or sections". It includes, and the term is sometimes used as a synonymous with, the art of cutting stones for masonry shells. From Notes of Stereotomy.
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.45\linewidth ]{figure/Introduction/NotesonStereotomy.JPG}
-\includegraphics[width=0.45\linewidth ]{figure/Introduction/NotesonStereotomy2.JPG}
-\caption{The length of the curve is the same regardless of coordinate system.}
-\end{figure}
-
-It was used early as an tool for subdividing shapes into building elements that would be able to cut and fit together. Wellknown in this field is Philibert de l'Orme from France that was active during the 16 th century. Long before computers he managed to create astonishing structures and patterns of very complex surfaces.
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.90\linewidth ]{figure/Introduction/Arles.jpg}
-\caption{The length of the curve is the same regardless of coordinate system.}
-\end{figure}
-
-This techniques are not very common today since it involves quite complex building elements that need to be manufactured. Though it is possible to read the research of the Block research group where they have investigated in how to use computational methods and digital fabrication to achieve this structures.
-
-
-\begin{figure}[H]
-\centering
-\includegraphics[height=0.50\linewidth ]{figure/Introduction/StereoBlock2.JPG}
-\includegraphics[height=0.35\linewidth ]{figure/Introduction/StereoBlock.JPG}
-\caption{The length of the curve is the same regardless of coordinate system.}
-\end{figure}
-
-
-
-\begin{figure}[H]
-\centering
-\includegraphics[height=0.4\linewidth ]{figure/Introduction/blockStereo.jpg}
-\caption{The length of the curve is the same regardless of coordinate system.}
-\end{figure}
 
 
   
@@ -363,8 +446,9 @@ There have not been many alternatives to this quite traditional way of making br
 \caption{The three main types vaulting}
 \end{figure}
 
-
-
+"Historically, masonry vaulting developed along three paths: the European, the Middle Eastern, and the Catalan (fig. 67) . The European path included Roman, Romanesque, Gothic, and Renaissance vaulting. The design of European vaults was generally based on the geometry of the circle, and the vaults were erected over temporary centering or form work. Working in this fashion resulted in relatively thick vaults, with the long dimensions of their stones or bricks lying along radial lines. The inclined thrusts of the vaults are resisted by either engaged or flying buttresses. 
+The second path of development took place in the Middle East, where both barrel vaults and domes were erected without the use of centering. For vaults, centering was eliminated by inclining the courses of bricks against an end wall and for domes, by building in a spiral pattern. The resulting vault shapes often tended toward a parabolic geometry rather than a circular one, probably because it was easier for the mason, when working without centering, to keep bricks in place in a partially completed vault if they were laid along a parabolic line. Middle Eastern vaults are about as thick as European ones. Their thrusts are resisted by thick walls or engaged buttresses.
+The third path of traditional masonry vault development— the Catalan vaulting technique— emerged in the region around Barcelona and is distinctly different from the other two. It utilizes multiple, overlapping laminations of thin tiles whose long dimensions lie in the curving surface of the vault. Catalan vaults are much thinner and lighter in weight than either European or Middle Eastern vaults. They are often also much shallower, sometimes rising as little as 10 percent of the span. They are extremely strong due to the staggering of joints between one tile lamination and the next. They are sometimes called timbrel vaults in reference to their extreme thinness, which is likened to that of the head of a timbrel, a small handdrum or tambourine."
 
 
 
