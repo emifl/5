@@ -7,20 +7,39 @@ In the following sections, examples of a figure, an equation, a table, a chemica
 
 Masonry is a composition or assemblage of building elements. The most common types of these elements are stones and bricks. It can though be in any shape it can be done with or without mortar but the structural action is similar. According to Heyman it is wise to and convenient to regard a masonry building as a collection of dry stones or bricks that are placed on one another to to form a stable structure. The mortar cannot be accounted since it may have reduced its structural influence with time - it cannot be assumed to add strength to the construction. The stability of the structure relies on the compaction under the gravity of its components. "A general state of compressive stress exists, but only feeble tensions can be resisted."\\
 
-
+\subsection{Structural design}
 Speaking in terms of general design there are three main structural criterion's, those of \textit{strength, stiffness and stability}. The first implies that the material should resist the internal stresses and the second ensures not to high deflections. These criterion's are not the crucial regarding masonry structures, it is the stability that is of most concern.\\
 
-Heyman uses an masonry arch to illustrate this. The load applied on the load is it self-weight and an external point load. The stresses are low and the deflection negligible until a certain magnitude of the point load is reached and it collapses. The stresses are still low in the structure but the internal forces cannot be held inside the geometry of the arch. This leads to the formation of four hinges that turns the structure into a collapse mechanism.\\   
+Heyman uses an masonry arch to illustrate this. The load applied on the load is it self-weight and an external point load. The stresses are low and the deflection negligible until a certain magnitude of the point load is reached and it collapses. The stresses are still low in the structure but the internal forces cannot be held inside the geometry of the arch. This leads to the formation of four frictionless hinges that turns the structure into a collapse mechanism.\\   
 
-Heyman imposes a method of based on plastic analysis for the structural design of masonry rather than the elastic analysis. One reason is that the elements of the arch for instance is rigid blocks and will not deform by themselves, and an elastic solution for that case is not possible. Another reason is that the plastic designer understands that there are several ways that the structure can handle the forces. Therefore the he or she uses the on of the three theorems of plasticity theory to avoid a collapse or structural failure. These are 
+\begin{figure}[H] 
+\centering
+\includegraphics[width=0.5\linewidth ]{figure/Theory/heyman3.pdf}
+\caption{Collapse mechanism of masonry vault by an asymmetric load}
+\label{fig:arch2}
+\end{figure}
+
+Heyman imposes a method of based on plastic analysis for the structural design of masonry rather than the elastic analysis. One reason is that an elastic solution might not be possible, an arch consisting of rigid blocks will not deform themselves and will therefore not obey the rules of elastic analysis. Another reason is that there are uncertainties regarding the structure and how the boundary conditions change during time. Therefore an elastic analysis might change dramatically with time. The so-called plastic designer knows that the there are infinite ways to achieve equilibrium and that the solution he has found is just one of them. The plastic designer takes this into account and applies the theorems of plasticity to ensure that the structure will not fail. \\
+
 
 \begin{itemize}
-\item The lower bound, or safe, theorem
-\item The upper bound, or unsafe, theorem
+\item The lower bound, or safe theorem
+\item The upper bound, or unsafe theorem
 \item The uniqueness theorem
 \end{itemize}
 
-This will be described more in detail later. To be able to apply the plastic theory masonry structures Heyman introduces three assumptions about the properties of the material:
+This will be described more in detail later. Important to understand that the hinges formed are natural behaviour of the masonry structures, in a similar way as the reinforced concrete is suppose to crack otherwise the reinforcement is unnecessary. So the designer should be aware of the of this phenomena. A sufficient hinges, or cracks, are fine but for instance the arch will collapse when four of these have formed. This can of course easily be very complicated to read in more complex structures where many different elements interact.
+
+\begin{figure}[H] 
+\centering
+\includegraphics[width=0.5\linewidth ]{figure/Theory/cracksHeyman.pdf}
+\caption{Collapse mechanism of masonry vault by an asymmetric load}
+\end{figure}
+
+\subsection{Limit Design Principles}
+
+The limit design principles Heyman purposes for masonry is similar to the ones used is similar to the plastic hinge theory used for plastic design of steel frames. This implies that hinges formed causes the structure to become a mechanism. To be able to apply the same theory and theorems for masonry structures Heyman makes three assumptions for the properties of the material:\\
+
 
 
 \textit{"(i) Stone has no tensile strength. This assumption is almost exactly true if a structure,
@@ -41,18 +60,7 @@ will be discussed more fully later.}
 example between voussoirs, the line of thrust should not depart too far from normality
 to that plane. (The collapse of Beauvais may have been initiated by sliding.)" }Stone Skeleton 660
 
-Heyman refer to the plastic and elastic designer. This kind of behaviour makes it questionable to rely entirely on the foundation of elastic theory there is correlation between stresses and deformation of the material, and when the yield stress is reached we cannot rely on the structure or component to be safe. 
-
-The structural assessment and design of masonry structures differs from conventional design of for instance steel and concrete. Elastic theory states that the material has a certain relationship between stresses and elongation of the material. When the structure has reached it yield limit based on the stresses in the structure we have reached a critical state and we can not assure the safety of the structure. In masonry structures the stresses are considerably low based on the material capacities. It could therefore be safe design based on elastic theory, but it could for unknown reasons collapse. 
-
-
-
-
-\subsection{Limit design}
-
-"For the purpose of establishing general principles and theorems, the following
-assumptions will be made about the properties of the,material :
-
+The hinges are formed when, as shown in figure \ref{fig:arch2}, when the line of thrust cannot contain itself inside the geometry. A thrust that follows the centre line of the structure results in pure axial forces, and when moving outside it results in a minor moment that until a certain point that will be negligible due to the compression of the self weight.
 
 \begin{figure}[H]
 \centering
@@ -60,18 +68,19 @@ assumptions will be made about the properties of the,material :
 \caption{Limit condition for masonry voussoirs}
 \end{figure}
 
-
-\subsection{Plasticity Theory}
-
-Plastic analysis is governed by three fundamental theorems which are valid for elasto-plastic structures in which the displacements are small such that the geometry of the displaced structure does not affect the applied loading system.
-
-\begin{itemize}
-\item The lower bound, or safe, theorem
-\item The upper bound, or unsafe, theorem
-\item The uniqueness theorem
-\end{itemize}
+This represents a block of infinite stress capacity since a normal stone or brick would crush when the contact area gets to small. Therefore there are some safety factors that need to be applied.
 
 
+\subsubsection{Safety factor}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth ]{figure/Theory/Safety.pdf}
+\caption{This shows the middle third rule applied to a block. redrawn from Block...}
+\end{figure}
+
+
+\subsection{Plasticty theorems}
 \subsubsection{Lower Bound Theory}
 
 
@@ -84,6 +93,8 @@ If a loading is found which causes a collapse mechanism to form then the loading
 Generally, in plastic analysis, the upper bound theorem is used. Possible collapse mechanisms are formulated and the corresponding collapse loads calculated. From the upper bound theorem we know that all mechanisms must give a value of collapse load which is greater than or equal to the true collapse load so that the critical mechanism is the one giving the lowest load. It is possible that a mechanism, which would give a lower value of collapse load, has been missed. A check must therefore be carried out by applying the lower bound theorem.
 
 
+\subsubsection{The uniqueness theorem}
+"The uniqueness theorem may be stated for masonry as follows: If a line of thrust can be found which represents an equilibrium state for the structure under the action of the given external loads, which lies wholly within the masonry, and which allows the formation of sufficient hinges to transform the structure into a mechanism, then the structure is on the point of collapse; further, if the loads can all be specified as ratios of one of their number (proportional loading), and the loads have been notionally increased from their working values to the collapse values by a load factor, then the value of that load factor at collapse is unique. "
 
 
 \section{Tensor Analysis}
@@ -638,11 +649,8 @@ A geodesic can be described as the the shortest path between two points, or "str
 \end{figure}
 
 So you can think of a geodesic as a shortest path between A and B but you can also say that standing in A there is a geodesic in every direction.\\
-
 "\textit{Through every point of the surface passes a geodesic in every direction. A geodesic is uniquely determined by an initial point and tangent at that point}" Struik 133
-
 To describe this in a mathematical way you would say that the geodesic curvature is zero in every point on the curve. 
-
 Applications in Architecture is for instance to get the cutting patterns for tensile structure. You could also see the umbrella for this.
 
 
@@ -661,8 +669,11 @@ Applications in Architecture is for instance to get the cutting patterns for ten
 \caption{The tangent differs depending of which direction you refer to. }
 \end{figure}
 
+\subsection{Curve Linear Coordinates On The Surface}
 
-\subsection{Geodesic Coordinates}
+Curve linear coordinates are... The properties of the different coordinate systems can be quite useful for practical reasons examples of those are ... .  
+
+\subsubsection{Geodesic Coordinates}
 
 Geodesic coordinates were introduced and extensively used by Gauss in his \textit{Disquisitones} of 1827.(Struik)The foundation of the geodesic coordinates is the  \textit{geodesic form}.\\ 
 In Struik we can read \textit{"Equation \ref{geodesicForm} is called the 'geodesic form' of the line element and ($\theta^1,\theta^2$) form a set of 'geodesic coordinates'; or, for short, 'geodesic set'.On every surface we can find an infinte number of geodesic szets, depending on an arbeitrary curve $C_0$, along which the curves $\theta^2$ = constant can still be spaced in an arbitrary way."}\\
@@ -706,11 +717,29 @@ so that
 
 Which means that the coordinate curves $\theta^1 = constant$ are geodesics. 
 
+
+\subsubsection{Polar Geodesic Coordinates}
+
 \begin{figure}[H]
 \centering
 \includegraphics[height=0.5\linewidth ]{figure/Theory/polarGeodesicCoordMod.pdf}
 \caption{The tangent differs depending of which direction you refer to. }
 \end{figure}
+
+
+\subsubsection{Equal Mesh Net Coordinates}
+
+For a defined surface it is possible to apply an equal mesh net. They do not necessarily consist of squares but most likely of mostly rhombus. The constraint for this is that the angle is allowed to change to consist the equal lengths. This is describe in detail by Willams in his papper from 1980 and in the book shell Struc...\\
+If the $a_{11} = a_{22} = L^2 = constant$ and $a_{12} = L^2\quad cos\alpha$ where $\alpha$ is the angle between the members.\\
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\linewidth ]{figure/Theory/equalMeshFrei.pdf}
+\caption{The tangent differs depending of which direction you refer to. }
+\end{figure}
+
+This is a powerful concept working on for instance lattice structures such as gridshells where you can assign a constant length to the members.
+
 
 \section{Form finding algorithms}
 
