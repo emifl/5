@@ -170,19 +170,28 @@ Where $f$ is a function of $x$ and $y$ and $c$ is a constant.From this point of 
 $$ \mathcal{C}\quad =\quad \left\{ (x,y) \in \mathbb{R}^2\quad |\quad f(x,y) = c \right\} $$
 
 
-It is sometimes more efficient to describe curves in another way, as a parametrized curve. Where the curve is described by a function $\gamma$ of a scalar parameter $t$ with vector values(in $\mathbb{R}^2$ for a plane curve, in $\mathbb{R}^3$ for a curve in space). 
+It is sometimes more efficient to describe curves in another way, as a parametrized curve. Where the curve is described by a vector \textbf{c} of a scalar parameter $t$ (in $\mathbb{R}^2$ for a plane curve, in $\mathbb{R}^3$ for a curve in space). 
+
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth ]{figure/Theory/CurveInSpace.pdf}              
+\caption{The geometry of the curve, from Presley }
+\end{figure}
+
+Stoker describes a \textit{regular} as the locus defined by a vector
 
 \begin{equation}
-\gamma(t) = x(t)\textbf{i} +  y(t)\textbf{j}+  z(t)\textbf{k},\quad in\quad \mathbb{R}^3
+\textbf{c}(t) = x(t)\textbf{e}_1 +  y(t)\textbf{e}_2+  z(t)\textbf{e}_3,\quad  \alpha \leq t \leq \beta
 \end{equation}
+ such that the functions  $x(t), y(t), z(t)$ have continuous second or third derivatives,in the interval of $\alpha$ and $\beta$, and such that the derivative of $\textbf{c}(t)$ with respect to $t$ is not zero.
+ 
+ \begin{equation}
+ \frac{\textbf{c}(t)}{dt} = \textbf{c}'(t)= (x'(t),y'(t),z'(t)) \neq 0
+ \end{equation}
 
-A proper definition of a parametrized curve can be read in Presley.
-
-\vspace{5mm} %5mm vertical space
-
-A \textit{parametrized curve} in $\mathbb{R}^n$ is a map $\gamma : (\alpha,\beta) \rightarrow \mathbb{R}^n $, for some $\alpha,\beta$ with $-\infty\leqslant\alpha<\beta\leqslant\infty$ 
-
-The symbol $(\alpha,\beta)$ denotes the open interval $(\alpha,\beta) = {t\in \mathbb{R} | \alpha < t < \beta}$
+The locus means that a set of points are related and governed of a set of equations or rules, in this case the rules of the curve. The latter statement ensures that the mapping of $t$ into the space of $(x,y,z)$ is one-to-one. When we speak of curves later on we impose that they are regular curves.
 
 \vspace{5mm} %5mm vertical space
 
@@ -192,7 +201,13 @@ Written in parametric form $\gamma(t) = (cos(t),sin(t))$. A useful property of t
 
 \subsubsection{Geometry of the space curve} \label{GeoSpaceCurve}
 
-If we have a curve $c(t)$, where the parameter $t$ is not necessarily an unit speed parametrization. If we evaluate a curve in a point, in that point the curve we define a curve tangent,$\textbf{t}$, a curve normal, $\textbf{n}$, and a curve binormal vector,$\textbf{b}$. The tangent and normal vector lies in what is called the osculating plane.
+If we have a curve $c(t)$, where the parameter $t$ is not necessarily an unit speed parametrization. It is possible to express the curve in what is called a arch length parametrization. The arch length of the curve of the curve is defined by the integral
+\begin{equation}
+s(t) = \int_{t_0}^{t_1} \sqrt{\frac{d\textbf{c}}{dt} \cdot \frac{d\textbf{c}}{dt}}dt
+\end{equation}
+
+With a arch length parametrization we ensure that the tangent of the curve is a unit speed vector, which can be quite convenient.
+Evaluating a curve in a point, in that point the curve we define a tangent,$\textbf{t}$, a principal norm, $\textbf{n}$, and a binormal vector,$\textbf{b}$, of the curve. The tangent and principal normal vector lies in what is called the osculating plane.
 
 \begin{figure}[H]
 \centering
@@ -200,22 +215,18 @@ If we have a curve $c(t)$, where the parameter $t$ is not necessarily an unit sp
 \caption{The geometry of the curve, from Presley }
 \end{figure}
 
-
+If we have a unit speed curve with $s$ as arch length parameter we have the tangent defined as 
 \begin{equation}
-\textbf{c}' =  \frac{d C(t)}{dt}, \quad \textbf{c}''=   \frac{d^2 C(t)}{dt^2}
+\textbf{t} =  \frac{d\textbf{c}}{ds} ,\quad \textbf{t} \cdot \textbf{t} = 1
 \end{equation}
 
+The $d\textbf{c}/dt$ is also a tangent but not necessarily unit vector. The principal vector is defined as following if we still assume $s$ as our arch length parameter.
 
 \begin{equation}
-\textbf{t} = \frac{\textbf{c}'}{||\textbf{c}'||} 
+\textbf{n} = \frac{1}{\kappa}\frac{d\textbf{t}}{ds} 
 \end{equation}
 
-Since \textbf{c}´´ and \textbf{t} lies in the same plane one can get the vector \textbf{b} taking the cross product of \textbf{c}´´ and \textbf{t}. 
-\begin{equation}
-\textbf{b} = \frac{\textbf{t} \times \textbf{c}''}{||\textbf{t} \times \textbf{c}''||} 
-\end{equation}
-
-You have the following relations between the vectors.
+Where $\kappa$ is the curvature in that specific point of the curve. It is easy to get the binormal vector \textbf{b} due to the following relations between the vectors.
 
 \begin{equation}
 \textbf{b} = \textbf{t} \times \textbf{n} ,\quad \textbf{n} = \textbf{b} \times \textbf{t} ,\quad \textbf{t} = \textbf{n} \times \textbf{b} 
@@ -227,14 +238,29 @@ You have the following relations between the vectors.
 
 \vspace{5mm} %5mm vertical space
 
-Definition of curvature, $\kappa$, for regular curves can be described. 
+Definition of curvature, $\kappa$, for regular curves can be described, for a parameter t is a following. 
 \begin{equation}
-\kappa = \frac{|| \textbf{c}'' \times \textbf{c}' ||}{||\textbf{c}'||^3} 
+\kappa = \frac{|| d^2\textbf{c}/ dt^2 \times d\textbf{c}/dt ||}{||d\textbf{c}/dt||^3} 
 \end{equation}
 
-Definition of torsion,$\tau$, for regular curves can be described. 
+For arch length parameter curves it is a bit more convenient and can be defined as $\kappa = ||d^2 \textbf{c}/ ds^2||$
+
+A similar definition can be made for torsion,$\tau$, as for the curvature for a regular curve with an arbitrary parameter t. 
 \begin{equation}
-\tau = \frac{ \textbf{c}''' \cdot(\textbf{c}' \times \textbf{c}'')}{||\textbf{c}' \times \textbf{c}''||^2} 
+\tau = \frac{ d^3\textbf{c}/ dt^3 \cdot(d\textbf{c}/dt \times d^2\textbf{c}/dt^2)}{||d\textbf{c}/dt \times d^2\textbf{c}/dt^2||^2} 
+\end{equation}
+
+It is possible to read the applied properties of the curve in vector form using the \textit{Frenet - Serret equations}, which implies.
+
+
+\begin{align}
+d\textbf{t}/ds = \kappa \textbf{n} \\
+d\textbf{n}/ds = - \kappa \textbf{t} + \tau \textbf{b}
+d\textbf{b}/ds = \tau \textbf{n}
+\end{align}
+
+\begin{equation}
+d\textbf{t}/ds = \kappa \textbf{n}, d\textbf{n}/ds = - \kappa \textbf{t} + \tau \textbf{b}, d\textbf{b}/ds = \tau \textbf{n}
 \end{equation}
 
 \subsection{Surfaces}
@@ -249,8 +275,33 @@ Definition of torsion,$\tau$, for regular curves can be described.
 \end{figure}
 
 
+A proper mathematical definition of a regular surfaces can be read in most books of concerning differential geometry. One of the most comprehensible to understand that not uses to concepts and words only concerning a mathematician can be read in Stoke.
 
+A \textit{regular surface} is defined as following.
 
+ \renewcommand{\labelenumii}{\Roman{enumii}}
+ \begin{enumerate}
+ \item A surface is a locus of points in the Euclidean three-space defined by the end points of a vector $\textbf{r} = \textbf{r}(\theta^1 ,\theta^2)$, depending on two real parameters $\theta^1$ and $\theta^2$.
+ \begin{equation}
+ \textbf{r}(\theta^1,\theta^2) = x(\theta^1,\theta^2)\textbf{e}_1 +  y(\theta^1,\theta^2)\textbf{e}_2+  z(\theta^1,\theta^2)\textbf{e}_3
+ \end{equation}
+ with $x_i(\theta^1,\theta^2)$ the components of the vector. These real functions are assumed to be defined oven an open connected domain of a Cartesian $\theta^1, \theta^2$ - plane and to have continuous fourth partial derivatives there.
+ \item The vectors $\textbf{r},_\alpha = \partial\textbf{r}/\partial \theta^\alpha $, to be called coordinate vectors, or covariant base vectors, are assumed to be linearly independent:
+ \begin{equation}
+ \frac{\partial\textbf{r}}{\partial \theta^1} \times  \frac{\partial\textbf{r}}{\partial \theta^2} \neq 0
+ \end{equation}
+ This can also be formulated in terms of the matrix
+ 
+
+\[M =
+\begin{bmatrix}
+    \partial x_1/ \partial\theta^1 & \partial x_2/ \partial\theta^1 & \partial x_3/ \partial\theta^1\\
+    \\
+    \partial x_1/ \partial\theta^2 & \partial x_2/ \partial\theta^2 & \partial x_3/ \partial\theta^2
+\end{bmatrix} , rank \quad M = 2
+\]
+ 
+ \end{enumerate}
 
 A mathematical definition for a regular surface can be written according to,Bär, as:
 
@@ -308,7 +359,7 @@ z = R sin(\theta^2)
 
 \subsubsection{Geometry on a Surface}
 
-Describe the nets on the surface .....
+On the surface a coordinate system of curves
 
 To orientate and describe geometry on the surface we can use two pair of base vectors....
 
