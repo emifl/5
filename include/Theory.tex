@@ -22,11 +22,11 @@ Heyman uses an masonry arch to illustrate this. The load applied on the load is 
 Heyman imposes a method of based on plastic analysis for the structural design of masonry rather than the elastic analysis. One reason is that an elastic solution might not be possible, an arch consisting of rigid blocks will not deform themselves and will therefore not obey the rules of elastic analysis. Another reason is that there are uncertainties regarding the structure and how the boundary conditions change during time. Therefore an elastic analysis might change dramatically with time. The so-called plastic designer knows that the there are infinite ways to achieve equilibrium and that the solution he has found is just one of them. The plastic designer takes this into account and applies the theorems of plasticity to ensure that the structure will not fail. \\
 
 
-\begin{itemize}
-\item The lower bound, or safe theorem
-\item The upper bound, or unsafe theorem
-\item The uniqueness theorem
-\end{itemize}
+\begin{enumerate}
+\item \textit{The lower bound, or safe theorem}
+\item \textit{The upper bound, or unsafe theorem}
+\item \textit{The uniqueness theorem}
+\end{enumerate}
 
 This will be described more in detail later. Important to understand that the hinges formed are natural behaviour of the masonry structures, in a similar way as the reinforced concrete is suppose to crack otherwise the reinforcement is unnecessary. So the designer should be aware of the of this phenomena. A sufficient hinges, or cracks, are fine but for instance the arch will collapse when four of these have formed. This can of course easily be very complicated to read in more complex structures where many different elements interact.
 
@@ -254,24 +254,22 @@ It is possible to read the applied properties of the curve in vector form using 
 
 
 \begin{align}
-d\textbf{t}/ds = \kappa \textbf{n} \\
-d\textbf{n}/ds = - \kappa \textbf{t} + \tau \textbf{b}
-d\textbf{b}/ds = \tau \textbf{n}
+&d\textbf{t}/ds = \kappa \textbf{n} \\
+&d\textbf{n}/ds = - \kappa \textbf{t} + \tau \textbf{b}\\
+&d\textbf{b}/ds = \tau \textbf{n}
 \end{align}
 
-\begin{equation}
-d\textbf{t}/ds = \kappa \textbf{n}, d\textbf{n}/ds = - \kappa \textbf{t} + \tau \textbf{b}, d\textbf{b}/ds = \tau \textbf{n}
-\end{equation}
+
 
 \subsection{Surfaces}
 
-"The word "surface" is an important term in mathematics and is used in many ways. The most common and straightforward use of the word is to denote a two-dimensional submanifold of three-dimensional Euclidean space. Surfaces can range from the very complicated (e.g., fractals such as the Mandelbrot set) to the very simple (such as the plane). " Rewrite
+The word surface is something that most engineers can relate to, even though nothing that necessarily feels comfortable.  Surfaces in three-dimensional space are two dimensional objects, meaning that we can describe them in a two dimensional domain using two parameters, it can be $u,v$ or $\theta^1,\theta^2$. They range from quite simple, as the plane, to very complex such as fractals. In mathematics it is quite uncommon to handle surfaces that are able to parametrize as whole, like the sphere or a cylinder. More common is that only a part, or patch is parametrized.  (Stoke)
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.5\linewidth]{figure/Theory/Romansurface.png}
+\includegraphics[width=0.7\linewidth]{figure/Theory/surfaces.pdf}
  
-\caption{Roman Surface $ x^2 y^2+x^2 z^2-x y z+y^2 z^2 = 0,$  }
+\caption{Examples of surfaces  }
 \end{figure}
 
 
@@ -283,7 +281,7 @@ A \textit{regular surface} is defined as following.
  \begin{enumerate}
  \item A surface is a locus of points in the Euclidean three-space defined by the end points of a vector $\textbf{r} = \textbf{r}(\theta^1 ,\theta^2)$, depending on two real parameters $\theta^1$ and $\theta^2$.
  \begin{equation}
- \textbf{r}(\theta^1,\theta^2) = x(\theta^1,\theta^2)\textbf{e}_1 +  y(\theta^1,\theta^2)\textbf{e}_2+  z(\theta^1,\theta^2)\textbf{e}_3
+ \textbf{r}(\theta^1,\theta^2) = x_1(\theta^1,\theta^2)\textbf{e}_1 +  x_2(\theta^1,\theta^2)\textbf{e}_2+  x_3(\theta^1,\theta^2)\textbf{e}_3
  \end{equation}
  with $x_i(\theta^1,\theta^2)$ the components of the vector. These real functions are assumed to be defined oven an open connected domain of a Cartesian $\theta^1, \theta^2$ - plane and to have continuous fourth partial derivatives there.
  \item The vectors $\textbf{r},_\alpha = \partial\textbf{r}/\partial \theta^\alpha $, to be called coordinate vectors, or covariant base vectors, are assumed to be linearly independent:
@@ -303,33 +301,18 @@ A \textit{regular surface} is defined as following.
  
  \end{enumerate}
 
-A mathematical definition for a regular surface can be written according to,Bär, as:
 
-\vspace{5mm} %5mm vertical space
-
-Let $S$  be a subset of $\mathbb{R}^3$ if there exists for every point $p \in S$ an open neighbourhood of $V$  of $p$ in $\mathbb{R}^3$, and if , in addition, there exists an open subset $U \subset \mathbb{R}^2$ and a smooth map $F:U \rightarrow \mathbb{R}^3$ such that
- 
-\begin{enumerate}
-\item $ F(U) = S \cap V$  and $F:U \rightarrow S \cap V$ is a homeomorphism 
-\item  the Jacobian $D_u F$ has rank 2 for every point $u \in U$  
-
-\end{enumerate}
 
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.7\linewidth]{figure/Theory/surfdef.pdf}
+\includegraphics[width=1.0\linewidth]{figure/Theory/SurfDefinition.pdf}
  
 \caption{The tangent differs depending of which direction you refer to. }
 \end{figure}
 
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.8\linewidth]{figure/Theory/surffunction.pdf}
- 
-\caption{The tangent differs depending of which direction you refer to. }
-\end{figure}
+
 
 
 
@@ -343,7 +326,7 @@ The most common surface is probably sphere which can be described in Cartesian c
 
 A general surface described in vector form as:
 \begin{equation}
-\textbf{r}(\theta^1,\theta^2) = x(\theta^1,\theta^2)\textbf{i} +  y(\theta^1,\theta^2)\textbf{j}+  z(\theta^1,\theta^2)\textbf{k}
+\textbf{r}(\theta^1,\theta^2) = x_1(\theta^1,\theta^2)\textbf{e}_1 +  x_2(\theta^1,\theta^2)\textbf{e}_2+  x_3(\theta^1,\theta^2)\textbf{e}_3
 \end{equation}
 
 Where \textbf{i},\textbf{j} and \textbf{k} are base vectors and where $\theta^1$ and $\theta^2$ are the surface coordinates.
@@ -352,9 +335,9 @@ Where \textbf{i},\textbf{j} and \textbf{k} are base vectors and where $\theta^1$
 
 Writing the above example in this form would be:
 \begin{equation}
-x = R cos(\theta^1) sin (\theta^2),\quad
-y = R  sin(\theta^1) cos (\theta^2),\quad
-z = R sin(\theta^2)
+x_1 = R cos(\theta^1) sin (\theta^2),\quad
+x_2 = R  sin(\theta^1) cos (\theta^2),\quad
+x_3 = R sin(\theta^2)
 \end{equation}
 
 \subsubsection{Geometry on a Surface}
@@ -365,7 +348,7 @@ To orientate and describe geometry on the surface we can use two pair of base ve
 
 The covaraiant base vectors of the surface are:
 \begin{equation} \label{convariantDiff}
- \textbf{a}_\alpha = \frac{\partial\textbf{r}}{\partial \theta^\alpha } = \frac{\partial x}{\partial \theta^\alpha }\textbf{i} + \frac{\partial y}{\partial \theta^\alpha }\textbf{j}+\frac{\partial z}{\partial \theta^\alpha }\textbf{k} = \textbf{r},_{\alpha} , for\quad \alpha = 1,2
+ \textbf{a}_\alpha = \frac{\partial\textbf{r}}{\partial \theta^\alpha } = \frac{\partial x}{\partial \theta^\alpha }\textbf{e}_1 + \frac{\partial y}{\partial \theta^\alpha }\textbf{e}_2+\frac{\partial z}{\partial \theta^\alpha }\textbf{e}_3 = \textbf{r},_{\alpha} , for\quad \alpha = 1,2
 \end{equation}
 
 
@@ -506,16 +489,16 @@ $$ e = L = b_{11} ,\quad  f= M = b_{12},\quad
 
 It is appropriate to distinguish four different cases depending on the determinant
 
-\begin{itemize}
-\item $b_{12}^2 - b_{11}b_{22} > 0$ \\
+\begin{enumerate}
+\item \textit{Elliptic case}, $ b_{11}b_{22}-b_{12}^2  > 0$ \\
+The indicatrix is an ellipse.
+\item \textit{Hyperbolic case}, $b_{11}b_{22}-b_{12}^2 < 0$ \\
+The indicatrix consists of a pair of conjugate hyoerbolas.
+\item \textit{Parabolic case}, $b_{11}b_{22}-b_{12}^2 = 0, b_{11}^2 + b_{12}^2 + b_{22}^2 \neq 0 $ \\
 Text text text.....
-\item $b_{12}^2 - b_{11}b_{22} = 0$ \\
+\item \textit{Planar case}, $b_{12} = b_{11} = b_{22} = 0$ \\
 Text text text.....
-\item $b_{12}^2 - b_{11}b_{22} < 0$ \\
-Text text text.....
-\item $b_{12} = b_{11} = b_{22} = 0$ \\
-Text text text.....
-\end{itemize}
+\end{enumerate}
 
 
 
@@ -625,7 +608,46 @@ Equation \ref{Gauss2} shows what \ref{Gauss} can be written in terms of the firs
 
 \subsubsection{Principal Curvature}
 
-The directions in the tangent plane for which $\kappa_n$ takes maximum takes maximum and minumum values are called principal directions. Struik
+The directions in the tangent plane for which $\kappa_n$ takes maximum takes maximum and minumum values are called principal directions.There are always two principal curvatures $\kappa_1$ and $\kappa_2$ and the directions are always orthogonal to each other.  Struik
+
+The principal curvatures are the roots of the equation
+\begin{equation}
+  \begin{vmatrix} 
+b_{11} - \kappa a_{11} & b_{12} - \kappa a_{12} \\ 
+b_{12} - \kappa a_{12} & b_{22} - \kappa a_{22}
+\end{vmatrix}
+=0
+\end{equation}
+
+and the principal vectors corresponding to the principal curvature $\kappa$ are the tangent vectors $\textbf{t} = \xi \textbf{a}_1 + \eta \textbf{a}_2$
+
+\begin{equation}
+\begin{pmatrix} 
+b_{11} - \kappa a_{11} & b_{12} - \kappa a_{12} \\ 
+b_{12} - \kappa a_{12} & b_{22} - \kappa a_{22}
+\end{pmatrix}
+\begin{pmatrix}
+\xi \\
+\eta
+\end{pmatrix}
+=
+\begin{pmatrix}
+0 \\
+0
+\end{pmatrix}
+\end{equation}
+
+
+\begin{equation}
+\kappa_n = \kappa_1cos^2(\phi) + \kappa_2sin^2(\phi) 
+\end{equation}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width = 0.6\linewidth ]{figure/Theory/principalCurvature2.pdf}
+\caption{Scan better picture from Pottman }
+\end{figure}
+
 
 
 \begin{figure}[H]
@@ -689,7 +711,7 @@ So far we have covered the properties of surfaces and curves somewhat separately
 
 
 
-\subsubsection{Geodesics}
+\subsubsection{Geodesics} \label{sec:geodesics}
 
 A geodesic can be described as the the shortest path between two points, or "straight". Straight in this sense meaning the direction the car would go without turning the wheels. Though it might be hard to imagine a straight curve on a non flat surface. One way is to think of an ant moving on surface in what it perceives as an straight motion. (Skate park Example?) The most common geodesics are the great circles of a sphere. Presley 215
 
@@ -714,15 +736,35 @@ Applications in Architecture is for instance to get the cutting patterns for ten
 
 \subsubsection{Normal and Geodesic Curvatures}
 
+In the section \ref{curvature} the curvature is defined as following for a unit speed curve,
+$\textit{d\textbf{t}}/ds = \kappa \textbf{n}$. This is of course true also even if the curve lies on a surface. It is though possible to discreisize the curvature into two parts, \textit{geodesic curvature}, $\kappa_g$, and \textit{normal curvature},$\kappa_n$, and reference it to the framework and properties of the surface. This gives a better understanding of how the curvature relates to the surface since the principal normal vector for space curves might be hard to anticipate. In the figure \ref{fig:GeoCurvature} it is possible to get an idea of how geodesic curvature and normal curvature behaves on the surface.
+\begin{equation}
+\kappa \textbf{n} = \kappa_n \textbf{a}_3 + \kappa_g\textbf{a}_3 \times \textbf{t}
+\end{equation}
+
+\begin{equation}
+\kappa_n = d^2\textbf{c}/ds^2 \cdot \textbf{a}_3,\quad \kappa_g = d^2\textbf{c}/ds^2 \cdot(\textbf{a}_3 \times \textbf{t})
+\end{equation}
+
+
 \begin{figure}[H]
 \centering
 \includegraphics[height=0.6\linewidth ]{figure/Theory/SFF.pdf}
 \caption{The tangent differs depending of which direction you refer to. }
+\label{fig:GeoCurvature}
 \end{figure}
+
+One example that is importance is when the geodesic curvature is zero and the curvature is only based on the normal curvature. Those curves that fulfills those requirements are called geodesics and can be read more in detail in \ref{sec:geodesics}.
 
 \subsection{Curve Linear Coordinates On The Surface}
 
-Curve linear coordinates are... The properties of the different coordinate systems can be quite useful for practical reasons examples of those are ... .  
+Curve linear coordinates can be illustrated as coordinate lines on the surface where the parameters $\theta^1$ and $\theta^2$ are constant. Coordinate can be said to form a net on the surface.
+Previously it has been assumed that the curve linear coordinate system has been the most basic that is of curves of constant values of parameters $\theta^1,\theta^2$. It is though possible to change the parameters as of:
+\begin{equation}
+\bar{\theta^1} = \phi(\theta^1,\theta^2),\quad \bar{\theta^2} = \phi(\theta^1,\theta^2)
+\end{equation}
+
+This means that we can apply different kinds of curve linear coordinate systems which can be really useful. In the future we shall only use $\theta^1$ and $\theta^2$ describing the parameters whatever coordinate parameters used.
 
 \subsubsection{Geodesic Coordinates}
 
@@ -796,21 +838,157 @@ This is a powerful concept working on for instance lattice structures such as gr
 
 \subsection{Force Density}
 
+The force density was used already on structures such as the Mannheim Multihall in 1974 and is also known as the "Stuttgart direct approach". A key concept in Force density method is obviously force densities.
+
+$$ Force \enskip Density, q, = \frac{Force\enskip in \enskip bar}{stressed\enskip length\enskip of\enskip bar}$$
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\linewidth ]{figure/Theory/NodeEqFD.pdf}
+\caption{The tangent differs depending of which direction you refer to. }
+\end{figure}
+
+The equilibrium for the x-direction can be described as following.
+
+\begin{equation}
+\frac{(x_j - x_i)}{l_j}F_j +\frac{(x_k - x_i)}{l_k}F_k+ \frac{(x_l - x_i)}{l_l}F_l + p_x = 0
+\end{equation}
+
+It is now possible to apply the defintion of the force densities $q_i = F_i/l_i$, for $i = 1,2,3$.
+
+\begin{equation}
+(x_j - x_i)q_j +(x_k - x_i)q_k + (x_l - x_i)q_l  + p_x = 0
+\end{equation}
+The \textbf{C} matrix describes the toplogy of the system. Using the methology of Linkwitz it should be $[3\times 4]$ matrix for the system above. The condition for the components are described below.
+
+\begin{equation}
+C_{ij} = \Bigg\{ \begin{matrix} 
++1\enskip if\enskip branch\enskip j\enskip ends\enskip in\enskip node\enskip i \\ 
+-1\enskip if\enskip branch\enskip j\enskip begins\enskip in\enskip node\enskip i \\ 
+0 \enskip otherwise  
+\end{matrix}
+\end{equation}
+
+The equilibrium equation can then be written in matrix form. \textbf{Q} is a diagonal matrix with the force densities and \textbf{x} is a position vector for the nodes, $[1\times 4]$ and \textbf{p} is also vector containg the loads. 
+
+\begin{equation}
+ \textbf{C}^T_N\textbf{Q}\textbf{C}\textbf{x} + \textbf{p} = \textbf{0}
+\end{equation}
+
+Linkwitz rewrites the equation to get it to the standard form for linear equations $\textbf{Ax=b}$
+
+\begin{equation}
+ \textbf{Dx} + \textbf{p} = \textbf{0}
+\end{equation}
+
+\begin{equation}
+\textbf{D}_N = \textbf{C}^T_N\textbf{Q}\textbf{C}_N,\quad \textbf{D}_F = \textbf{C}^T_N\textbf{Q}\textbf{C}_F 
+\end{equation}
+
+The node positions of the free nodes can be solved in the same manor in a standard manor for linear equations on matrix form.
+
+\begin{align*} 
+   \textbf{x}_N = \textbf{D}_N^{-1}(\textbf{p}_x - \textbf{D}_F\textbf{x}_F) \\ 
+   \textbf{y}_N = \textbf{D}_N^{-1}(\textbf{p}_y - \textbf{D}_F\textbf{y}_F) \\ 
+   \textbf{z}_N = \textbf{D}_N^{-1}(\textbf{p}_z - \textbf{D}_F\textbf{z}_F) 
+\end{align*}
+
+For a computer program the process could be described in the following stages.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\linewidth ]{figure/Theory/FDScheme2.pdf}
+\caption{The tangent differs depending of which direction you refer to. }
+\end{figure}
+
+
 \subsection{Thrust Network Analysis}
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.6\linewidth ]{figure/Theory/TNA.jpg}
-\caption{The tangent differs depending of which direction you refer to. }
-\end{figure}
+The Thrust Network analysis was developed by Phillipe Block during his Phd. at MIT for design and analysis of  3 dimensional unreinforced masonry structures. It can be seen as an extension of the FDM for masonry structures and is placed under the branch \textit{Geometric Stiffnes Methods}. Main concepts of TNA could be described as the separation of horizontal of vertical equilibrium and the possibility to work with different equilibrium solutions through the principles of graphic statics. Block describes three different domains, the form diagram, $\Gamma$, in $\mathbb{R}^2$  , the reciprocal form diagram, $\Gamma^*$, in $\mathbb{R}^2$,  and the solution network $G$, in $\mathbb{R}^3$.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.6\linewidth ]{figure/Theory/RhinoVault.jpg}
+\includegraphics[width=1.0\linewidth ]{figure/Theory/TNA.jpg}
 \caption{The tangent differs depending of which direction you refer to. }
 \end{figure}
 
-\subsection{Dynamic Relaxation}
+Key concepts
+
+\begin{enumerate}
+\item \textit{Parallel Loads} - This meaning that if a set of vectors is in equilibrium in space then their projection along any direction onto a plane will also be in equilibrium. This is proven by Green in Zerna in section \ref{sec:planeCoord} that we always project and formulate our problem in plane coordinates.
+\item \textit{Indeterminate networks} - In statically indeterminate structures or systems there are several possibilities of equilibrium solutions. Block introduces a scale factor that enables to adjust the horizontal components of the reciprocal force diagram.     
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth ]{figure/Theory/TNAKey2.JPG}
+\caption{The tangent differs depending of which direction you refer to. }
+\end{figure}
+
+\end{enumerate}
+
+
+In the Phd. Block states that TNA is based on the following assumptions which to some extent are similar to the assumptions of Heyman for design of masonry structures in section..
+
+\begin{enumerate}
+\item The structural action of the vault is represented by a discrete network of forces with discrete loads applied at the vertices. 
+\item A compression-only solution in equilibrium with the applied loads and contained within the vault’s geometry represents a valid, i.e. stable, equilibrium state of the vault.
+\item Masonry has no tensile capacity; sliding does not occur; and the stresses are low enough so that crushing does not occur. 
+\item All loads need to be vertical.
+\end{enumerate}
+
+The last assumption is a big difference and limitation compared to FDM, and other form-finding algorithms.
+
+
+The equilibrium equations for TNA are,as mentioned, divided into  horizontal and vertical equilibrium conditions. 
+
+\begin{equation}
+    F_{H,ji} + F_{H,ki}+ F_{H,li}  =0 
+\end{equation}
+\begin{equation} \label{eq:vertTNA}
+    F_{V,ji} + F_{V,ki}+ F_{V,li} = P_i
+\end{equation}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth ]{figure/Theory/NodeEqTNA.pdf}
+\caption{The tangent differs depending of which direction you refer to. }
+\end{figure}
+
+As the second key concept tells it is possible to describe the vertical equilibrium in plane forces. Therefore the equation \ref{eq:vertTNA} can written as a function of the horizontal components $F_{H,ij}$  
+
+
+
+
+\begin{equation}
+    F_{H,ij}\frac{z_i-z_j}{l_{H,ij}} +F_{H,ik}\frac{z_i-z_k}{l_{H,ik}}+F_{H,il}\frac{z_i-z_l}{l_{H,il}} = P_i
+\end{equation}
+
+
+\begin{equation}
+    F_{H,ij} =\frac{1}{r}{l^*_{H,ij}}
+\end{equation}
+
+\begin{equation}
+    \textbf{q}=\frac{1}{r}\textbf{L}^{-1}_H\textbf{l}^*_{H}
+\end{equation}
+
+\begin{equation}
+    \textbf{C}^T_N(\textbf{L}^{-1}_H\textbf{L}^*_H)\textbf{C}\textbf{z}- r\textbf{p} = \textbf{0}
+\end{equation}
+
+\begin{equation}
+    \textbf{z}_N = \textbf{D}^{-1}_N(\textbf{p}r-\textbf{D}_F\textbf{z}_F)
+\end{equation}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\linewidth ]{figure/Theory/TNAScheme.pdf}
+\caption{The tangent differs depending of which direction you refer to. }
+\end{figure}
+
+\subsection{Dynamic Relaxation}\label{DR}
 
 The basic equation of dynamics is based on Newtons second law of motion. So the sum of all forces in the system is equal to the mass times acceleration.
 
@@ -863,20 +1041,29 @@ $T$ is the surface tension and $a^{\alpha \beta}$ is the metric tensor. In addit
 
 \subsection{Curved beams}
 
-Before heading into the membrane theory of shells we can look at an curved beam element.
+Before heading into the membrane theory of shells we can look at an curved beam element. If applying the load in the radial,$p_r$ and angular direction,$p_\theta$,in force per unit length, it is possible to formulate an expression for the radii to avoid shear forces and bending moments. The force in the axial direction in this case is,$N$. The arch length is defined as $\delta s = r(\theta)\Delta\theta $
 
 \begin{figure}[H]
 \centering
-\includegraphics[height=0.5\linewidth ]{figure/Theory/CurvedBeam.JPG}
+\includegraphics[width=0.9\linewidth ]{figure/Theory/CurvedBeam3.pdf}
 \caption{The tangent differs depending of which direction you refer to. }
 \end{figure}
+
+For an inifitely small segment it is possible to derive the following equilibrium equations.
+
+\begin{equation}
+N = p_r r,\quad \frac{1}{r} \frac{dN}{d\theta} = \frac{dN}{ds} = - p_\theta
+\end{equation}
+
+For an known loading it is possible to solve the axial force and the radii of that arch. Since the relation between the radial and angular loading will change when the angle change, under dead load in the gravitational direction, the expression for the radii will change, and therefore not circular. 
+
 \subsection{General Theory of Membrane Shells}
 
 
 Shells, in which bending moments can be neglected are called membrane
 shells. Membrane theory assumes the following things:
 
-\begin{itemize}
+\begin{enumerate}
 \item The material of the shell is isotropic and obeys Hooke's law.
 \item The thickness of the shell (and the bending moments) can be neglected.
 \item The state of stress of the shell is fully described by the membrane
@@ -884,7 +1071,7 @@ forces acting in the mean surface.
 \item Supports along the boundary are tangent to the mean surface.
 \item Deformations due to membrane forces are not hindered by boundary
 conditions.
-\end{itemize}
+\end{enumerate}
 
 \begin{figure}[H]
 \centering
@@ -922,7 +1109,7 @@ Coefficients of $\textbf{a}_3$,  1 equation.
 (n^{\alpha \beta} b_{\alpha \beta} + p)\textbf{a}_3 = 0
 \end{equation}
 
-The shell is subjected to external loads which is dentoted by $\textbf{p}$ and is measured per unit area of the middle surface.
+The shell is subjected to external loads which is denoted by $\textbf{p}$ and is measured per unit area of the middle surface.
 
 \begin{equation}
 \textbf{p} = p^{\alpha}\textbf{a}_\alpha +p\textbf{a}_3
@@ -950,7 +1137,7 @@ n^{\alpha \beta}|_\alpha = n^{\alpha \beta}_{,a} + \Gamma^\beta_{\alpha \rho} n^
 \caption{The tangent differs depending of which direction you refer to. }
 \end{figure}
 
-\subsection{Membrane Theory In Plane Coordinates}
+\subsection{Membrane Theory In Plane Coordinates} \label{sec:planeCoord}
 It is sometimes useful to have the membrane theory expressed in a base plane $\Pi$. This is for instance a vital part of the \textit{Thrust network analysis} method presented in \textit{Philippe Blocks} Phd.
 
 "We consider a net of coordinate curves on the middle surface M and we form a parallel projection on this net on to a plane $\Pi$. The direction of the projection is given by the unit vector $\textbf{e}_3$ which is perpendicular to $\Pi$ and measured from $\Pi$ to $M$. We now have a net od coordinate curves on $\Pi$ which corresponds to the net of $M$ and we assume that correspondence is one-one. The distance between two corresponding points of  $M$ and $\Pi$ is measured in the direction of $\textbf{e}_3$ is denoted by $z(\theta^1, \theta^2)$ which is a function of $\theta^1,\theta^2$ and us a surface invariant.Taking the \textbf{r} for the position vector of $M$, and $\hat{\textbf{r}}$ for the position vector of the corresponding point of $\Pi$, we have $\textbf{r} = \hat{\textbf{r}} + z \textbf{e}_3$."
@@ -990,4 +1177,50 @@ This is the equation you can read in books the famous book \textit{Theory of Pla
 \begin{equation}
 \sigma_x = \frac{\partial^2\phi}{\partial y^2}, \sigma_y = \frac{\partial^2\phi}{\partial x^2}, \sigma_{xy} = \frac{\partial^2\phi}{\partial x \partial y}
 \end{equation}
+\newpage
+\section{Compatibility of Differential geometry and Membrane theory}
+
+In the paper Air supported structure the state of art Williams present a technique to combine form finding with the generation of cutting patterns for tensile structures, i.e finding shapes of equilibrium that applies geodesic coordinates where one of the set curves are geodesics. 
+Assuming we have know loadings of the membrane we have 9 components that are unknown:
+
+\[ 
+\left \{
+  \begin{tabular}{ccc}
+  $a_{11}$  & $a_{12} =a_{21} $ & $a_{22}$ \\
+ $b_{11}$  & $b_{12} =b_{21} $ & $b_{22}$\\
+  $n_{11}$  & $n_{12} =n_{21} $ & $n_{22}$ 
+  \end{tabular}
+\right \}
+\]
+
+\vspace{5mm}
+Obviously that means we need 9 equations to solve 9 unknown components. Gauss and Codazzi proved that the first and second fundamental form is indeed connected. Green and Zerna shows through the equilibrium connects the first and second fundamental form to the stress components. 
+\vspace{5mm}
+
+Three equations arise from the equilibrium equations.
+
+$$n^{\alpha \beta}b_{\alpha \beta} + p = 0$$
+$$n^{\alpha \beta}|_\alpha + p^\beta = 0$$
+
+Three equations arise from equations of Gauss(Theorema egregium) and Codazzi.
+
+
+$$ b_{11},_2 - b_{12},_1 = b_{11} \Gamma^1_{12} + b_{12}(\Gamma^2_{12} - \Gamma^1_{11}) - b_{22}\Gamma^2_{11} $$
+$$   b_{12},_2 - b_{22},_1 = b_{11} \Gamma^1_{22} + b_{12}(\Gamma^2_{22} - \Gamma^1_{12}) - b_{22}\Gamma^2_{12} $$
+$$  K= \frac{b_{11}b_{22}-b^2_{12}}{a}$$
+
+That is in total 6 equations so it is still three unknown. It is possible to impose more known conditions than the loads alone. Two examples of these are
+\vspace{5mm}
+\begin{enumerate}
+\item \textit{Geodesic coordinates}, $a_{22} = L^2 = const, a_{12}=0$
+\begin{figure}[H]
+\centering
+\includegraphics[height=0.7\linewidth ]{figure/Theory/geodesicCoordRe.pdf}
+\end{figure}
+\item \textit{Equal mesh net coordinates}, $a_{11}= a_{22} = L^2, n_{12}=0$ 
+\begin{figure}[H]
+\centering
+\includegraphics[height=0.4\linewidth ]{figure/Theory/equalMeshFrei.pdf}
+\end{figure}
+\end{enumerate}
 

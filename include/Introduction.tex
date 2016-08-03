@@ -6,8 +6,8 @@ Michelangelo turned blocks of marble into human flesh and emotions as if it was 
 
 \begin{figure}[H]
 \centering
-\includegraphics[height=0.35\linewidth ]{figure/Introduction/Mich.jpg}
-\includegraphics[height=0.35\linewidth ]{figure/Introduction/Caravaggio.jpg}
+\includegraphics[height=0.39\linewidth ]{figure/Introduction/Mich.jpg}
+\includegraphics[height=0.39\linewidth ]{figure/Introduction/Caravaggio.jpg}
 \caption{Michelangelo and Caravaggio}
 \end{figure}
 
@@ -15,7 +15,7 @@ Similar challenges have master builders through time been facing. Creating maste
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.9\linewidth ]{figure/Introduction/Salisbury.jpg}
+\includegraphics[width=1.0\linewidth ]{figure/Introduction/Exeter.jpg}
 \caption{Salisbury Church}
 \end{figure}
 
@@ -504,12 +504,22 @@ The parameters that can be imposed to control the form-finding process are:
 
 \subsubsection{Graphical Methods}
 
+The most basic type, but not less powerful, of form finding is graphical methods. A type of these is called \textit{graphic static} or \textit{force polygon method}. This method can be used to seek a form of equilibrium or analysing already designed structural members such as trusses. The method originates from the work of \textit{Karl Culmann} published in \textit{Die graphische statik} in 1866.This method have had much influence for modern structural design in the late 19th century and early 20th century and was used by modern structural pioneers such as \textit{Rafael Guastavino,Antoni Gaudi,Felix Candela} and \textit{Robert Maillart}. 
 
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\linewidth ]{figure/Introduction/GraphStat4.JPG}
+\caption{Compression-only Form finding through Finite Subdivision of the
+Force Polygon }
+\end{figure}
+
+The main idea is to use work in this force polygons which are represented in what is called a reciprocal force diagram. These polygons should always be closed to ensure that the forces are in equilibrium. In the example below, from the book Form and Forces, it illustrates a hanging cable where the internal forces and global forces are constructed as triangles, and since they are closed polygons the structure is in equilibrium. The powerful aspect of graphic statics is the illustrative way of expressing the force connections and how the design relates the force patterns.   
 
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.6\linewidth ]{figure/Theory/graphStatEx.JPG}
+\includegraphics[width=0.6\linewidth ]{figure/Introduction/GraphStat2.JPG}
+\includegraphics[width=0.35\linewidth ]{figure/Introduction/GraphStat3.JPG}
 \caption{Compression-only Form finding through Finite Subdivision of the
 Force Polygon }
 \end{figure}
@@ -556,21 +566,32 @@ Many have seen the the hanging cable models of \textit{Gaudi} but the  modern pi
 
 
 
-\subsubsection{Numerical Methods}
+\subsubsection{Numerical Methods} \label{numerical Methods}
+
+The numerical methods for form-finding are usually spoke of them as quite different, but they all share the same basic ideas. In the book Shell.. they formulate a recipe for a numerical form-finding method:\\
+
+\begin{enumerate}
+    \item \textit{Discretization of geometry}. This means that the initial geometry or form needs to be broken down into elements such as lines or surface elements.
+    \item \textit{Connectivity of internal and external forces}, it is necessary to have a clear topology of how the members are connected and how the external loading and boundary conditions apply.
+    \item \textit{Equilibrium conditions and equations}. The equilibrium conditions defines how the internal and external forces and boundary relate to each other. 
+    \item \textit{A solver}, a method for how the equilibrium equations can be solved.
+\end{enumerate}
+\vspace{5mm}
+
+This template is of course a bit rough and there is a big diversity of solvers, it can be linear or non-linear problems and it can be a static or dynamic equilibrium conditions for instance. To give a bit of structure to this diversity Block and Veenendaal describes different \textit{form-finding families}.\\ 
 
 
-Computational Form-Finding algorithms can be divided in the following three branches according to Veenendal and Block. 
+\begin{enumerate}
+\item \textit{Stiffness Matrix Methods}, these are based on using standard elastic and geometric matrices. These have a strong connection to traditional structural analysis and \textit{Finitie Element Method(FEM)}.
+\item \textit{Geometric Stiffness Methods}, these are material independent where the equilibrium is achieved only with a geometrical stiffness. The most common and influential of these is the \textit{Force Density Method(FMD)}, where the equilibrium equations are based on the ratio of force to length. Extensions have been done and different methods have been emerged such as the \textit{Thrust Network Analysis(TNA)}.
+\item \textit{Dynamic Equilibrium Methods}, these methods have a dynamic based equilibrium condition, i.e the second Law of Newton $\sum F = ma$ which is different compared to statics where the sum of forces always are equal to zero. Examples of these methods are \textit{Dynamic Relaxation(DR)} and \textit{Particle-Spring(PS)} systems. You can read further about DR in section \ref{DR}. The figure \ref{fig:DR} can give an idea of how a DR or PS can behave for a quadratic mesh fixed in the corners. 
 
-\begin{itemize}
-\item Stiffness Matrix Methods
-\item Geometric Stiffness Methods
-\item Dynamic Equilibrium Methods 
-\end{itemize}
-
-\begin{figure}[H]
+\end{enumerate}
+\begin{figure}[H] 
 \centering
 \includegraphics[width=0.6\linewidth ]{figure/Theory/PartSpring.jpg}
 \caption{The tangent differs depending of which direction you refer to. }
+\label{fig:DR}
 \end{figure}
 
 
@@ -602,9 +623,79 @@ Examples of environments using a parametric concept is \textit{Grasshopper3d}, \
 \caption{The tangent differs depending of which direction you refer to. }
 \end{figure}
 
+\subsection{Pre-study of different thesis questions}
+In this section I will describe a two week long workshop where the purpose was to investigate different tracks in the context explained in the previous sections. 
+
+\subsubsection{Comparison of different form finding methods} \label{CompMethods}
+There are a range of different numerical methods for exploring form which was discussed briefly in section \ref{numerical Methods}. They are often mentioned as different but maybe it is also true to say they are very equal in the sense that all of them seeks equilibrium. There is a difference in the sense that they demand different parameters, some give a lot of options and some can be very simple in their most basic implementation, they can be more or less computational heavy and maybe more or less suiting for the kind of situation. 
+Reading about the different methods, in Architecture..., a basic implantation was made for \textit{Force Density}, a simplified version of \textit{TNA} and \textit{Dynamic Relaxation}. This was done in Grasshopper components. 
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth ]{figure/Introduction/PreStudyComp.png}
+\caption{The tangent differs depending of which direction you refer to. }
+\end{figure}
+
+Possible research questions in this field:
+\begin{itemize}
+\item \textit{Computational power} - As designers and engineers we like to be able to get real time response. If the algorithm demands a lot of computational power it can be a limiting factor in regards of extending the functionality. 
+\item \textit{Extendability} - Is it possible to be able to implement more functionality and more advanced or complex models.
+\item \textit{Designer friendly} - Sometimes we are given to many, or to few parameters, to actually control the output. Who is the designer? And what does he or she need to know. 
+\end{itemize}
+
+\subsubsection{Parametric design tools}
+There is a big difference in doing manual editing such as typical 3d-modelling and doing a fully parametrized design where need communicate with conditional statements and different sliders. There are big advantages in having a intelligent design, it can though also be limiting when you want to tweak your design in a way you can´t describe in scripts. A possibility would be to combine the two approaches to give some freedom and some intelligence. A parametric definition you can change and alter and a freedom to also do some manual tweaking.\\
+
+A simple example was made using the on of the methods developed in the previous section \ref{CompMethods} . Inspired by a picture of free-form masonry arch where you can design the arch and see if it is possible to find an equilibrium solution that fits the form.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\linewidth ]{figure/Introduction/PreStudyDes.png}
+\caption{The tangent differs depending of which direction you refer to. }
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth ]{figure/Introduction/PreStudyDes3.png}
+\caption{The tangent differs depending of which direction you refer to. }
+\end{figure}
+
+Possible extension to this field might be to develop algorithms and parametric definitions that give more freedom for designer and also give feedback if it is suitable or not, or searches for the closest possible to solution. An example can be related to the design of domes where it is a form that the designer has found appealing though history, but it is not really optimal since the form itself creates tension. Though we can find a solution that fits inside by adjusting boundaries and weights.
+
+\subsubsection{Visualization and structural understanding }
+
+The software \textit{RhinoVault} is based on the methodology of TNA, and is made for \textit{Rhinoceros3d}. It provides some really nice features such as the reciprocal force diagrams that are visualized and possible to change and adapt to the structure. It gives another kind of understanding of how the forces are connected than typical gradient based force diagrams, just showing high and low stresses. It powerful feature that can be applied in a parametric environment where you can connect all the powerful features of a parametric design environment. A proposal of using dynamic relaxation create a reciprocal force diagram was made by Daniel Piker. Connecting the form-finding methods developed in \ref{CompMethods} you can get some real nice projected force diagrams. In this way he states though that it is only a one way connection and so you cannot two-way connection as in RhinoVault. This implies only applying the same force densities or stiffness to the members which is rather limiting.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth ]{figure/Introduction/PreStudyAna.png}
+\caption{The tangent differs depending of which direction you refer to. }
+\end{figure}
+
+A possible research question would be to develop a software for parametric environments that gives the same functionality as in TNA to understand and interact with the reciprocal force diagrams.
+
+\subsubsection{Physical testing of theoretical methods}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth ]{figure/Introduction/PreStudyFab.png}
+\caption{The tangent differs depending of which direction you refer to. }
+\end{figure}
 
 
 \section{Purpose} 
+The  purpose of this thesis is to investigate the possibility of using the concepts of differential geometry to generate the patterns for bricklaying on compressive shell forms. The report will integrate the fields theory of differential geometry, theory of shells, theory of masonry structures and computational methods. The theoretical framework will therefore be divided in four parts:\\
+\begin{enumerate}
+    \item \textit{Theory structural masonry} - This will be based on a plastic design approach used for assessment and understanding of complex historical masonry structures such as cathedrals. The theory differs from traditional structural engineering practice due to the nature of the masonry composition where stresses in structure cannot be read in the same way.   
+    \item \textit{Differential geometry} - This section will explore the basics of differential geometry which includes the elementary theory related to curves and surfaces. This is a necessity for understanding the theory of free-form shells. The part will also include parts that are not directly related but can be confusing if not explained, for instances there are different types of curvature for surfaces and curves and it is necessary not to mix them up.
+    \item \textit{Theory of free-form membrane shells} - This section will describe the theory of free-form shells in a approach understandable for the structural engineer. This complex theory is usually used by mechanical engineers and no attempts has been done to explain in the concepts for the structural engineer.
+    \item \textit{Computational methods} - This section will explain how computational methods can be used to find solutions when the analytical solutions based on the theory above can´t or is very hard to achieve.
+\end{enumerate}
+
+
 \section{Limitations} \label{Section_ref}
 
+This report will only concern brick structures, meaning module blocks with the same dimensions, and not other types of masonry structures such as stone or concrete. The structural theory though applies to all masonry structures. The report will concern compressive brick shell structures and not conventional brick structures. Compression structures meaning in this case structures where the form ensures equilibrium in compressive axial forces and where reinforcement is not necessary in theory. The forms generated are of conceptual nature meaning that no detailed calculations or instability checks are made, such as buckling. \\ 
 
+The implementations will be programmed in a parametric development environment,but no effort will be made to develop and evaluate different parametric design processes. The code will be implemented using the object-oriented language C\#. The methods are though general and should be possible to implement using most languages. 
