@@ -138,22 +138,6 @@ Something that is dependent on Smooth geometry and functions. That is because it
 \newcommand{\lowerromannumeral}[1]{\romannumeral#1\relax}
 
 
-\subsection{Intrinsic and Extrinsic properties}
-
-Declare the difference of embodied properties and those dependent on how you define things etc etc
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.9\linewidth ]{figure/Theory/intrisic_extrinsic2.pdf}
-\caption{The length of the curve is the same regardless of coordinate system.}
-\end{figure}
-
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.9\linewidth ]{figure/Theory/intrisic_extrinsic1.pdf}
-\caption{The tangent differs depending of which direction you refer to. }
-\end{figure}
 
 \subsection{Curves In Space}
 There are many examples of Curves and most of you have used various of them. Common examples might be a line, a parabola or a circle. 
@@ -510,12 +494,9 @@ Text text text.....
 
 \subsubsection{Christoffel Symbols}
 
-Christoffel Symbols are defined and used to measure the rate of change from a point P to a point Q in the base vectors of P.
-
-
-
+As described previously the cordinate base vectors are dependent on the curvelinear coordinate lines, and importantly the lines do change with the surface. Therefore that means that the coordinate base vectors does change, which is a big difference to a Cartesian coordinate system where the base vectors are the same. Therefore Christoffel Symbols are defined and used to measure the rate of change from a point P to a point Q in the base vectors of P.
 In the book  \textit{Einstein's Theory: A Rigorous Introduction for the Mathematically Untrained}, you can read this description \textit{ "The Christoffel symbol $\Gamma^\gamma_{\alpha \beta}$, is the $\gamma$ component of the change of the coordinatebasis vector $ \textbf{a}_\beta $ by an infinitesimal coordinate displacement $ d\theta^\alpha $, per unit coordinate
-distance."} 
+distance."} \cite{ref:Einstein}
 
 With this definition:
 
@@ -524,7 +505,7 @@ With this definition:
 \end{equation}
 
 
-
+According to Williams the Christoffel symbols do not represent anything real.  
 "They give the properties of the coordinate system as lengths and directions change along the coordinate curves. They do not represent anything real, are NOT the components of a tensor and do not obey the tensor component rule under a change of coordinates." Chris Willams
 
 \begin{figure}[H]
@@ -645,7 +626,7 @@ b_{12} - \kappa a_{12} & b_{22} - \kappa a_{22}
 \begin{figure}[H]
 \centering
 \includegraphics[width = 0.6\linewidth ]{figure/Theory/principalCurvature2.pdf}
-\caption{Scan better picture from Pottman }
+\caption{Scan better picture from Pottman\cite{ref:ArchGeometry} }
 \end{figure}
 
 
@@ -653,7 +634,7 @@ b_{12} - \kappa a_{12} & b_{22} - \kappa a_{22}
 \begin{figure}[H]
 \centering
 \includegraphics[width = 0.9\linewidth ]{figure/Theory/principalCurvature.pdf}
-\caption{Scan better picture from Pottman }
+\caption{Scan better picture from Pottman \cite{ref:ArchGeometry}}
 \end{figure}
 
 
@@ -687,7 +668,7 @@ A minimal surface can be produced physically by using soap film and was experime
 \begin{figure}[H] 
 \centering
 \includegraphics[width=0.9\linewidth ]{figure/Theory/SoapSreeen.jpg}
-\caption{Screenshoot from a movie of Frei Ottos}
+\caption{Screenshoot from a movie of Frei Ottos \cite{ref:FreiOttoSoap}}
 \end{figure}
 
 
@@ -713,7 +694,8 @@ So far we have covered the properties of surfaces and curves somewhat separately
 
 \subsubsection{Geodesics} \label{sec:geodesics}
 
-A geodesic can be described as the the shortest path between two points, or "straight". Straight in this sense meaning the direction the car would go without turning the wheels. Though it might be hard to imagine a straight curve on a non flat surface. One way is to think of an ant moving on surface in what it perceives as an straight motion. (Skate park Example?) The most common geodesics are the great circles of a sphere. Presley 215
+The most common description a geodesic curve is the shortest path between two points on a surface. More interesting might be to think of the experience of moving along a geodesic on the surface. Presley describes it as even the curve does not in fact look straight the notion is that we are progressing in a straight direction, i.e we do not need to turn to keep ourselves on the curve. 
+
 
 \begin{figure}[H]
 \centering
@@ -721,18 +703,41 @@ A geodesic can be described as the the shortest path between two points, or "str
 \caption{An ant moving on the surface in what it senses as a straight line is called a geodesic }
 \end{figure}
 
+To visualize this on a physical surface one can  mount a straight paper strip upon the surface, without wrinkling the paper. \textit{A straight piece of paper laid over a smooth surface will follow a geodesic on the surface"} \cite{ref:ArchGeometry}. This is visualised in the figures below where the ribbons are geodesics on the surface.
+
+\begin{figure}[H]
+\centering
+\includegraphics[height=0.35\linewidth ]{figure/Theory/geo1.JPG}
+\includegraphics[height=0.35\linewidth ]{figure/Theory/geo2.JPG}
+\caption{Straight ribbons laid out flat on a surface will follow the geodesics on that surface.\cite{ref:ArchGeometry} }
+\label{fig:ribbon}
+\end{figure}
+
+
+
 So you can think of a geodesic as a shortest path between A and B but you can also say that standing in A there is a geodesic in every direction.\\
-"\textit{Through every point of the surface passes a geodesic in every direction. A geodesic is uniquely determined by an initial point and tangent at that point}" Struik 133
-To describe this in a mathematical way you would say that the geodesic curvature is zero in every point on the curve. 
-Applications in Architecture is for instance to get the cutting patterns for tensile structure. You could also see the umbrella for this.
+"\textit{Through every point of the surface passes a geodesic in every direction. A geodesic is uniquely determined by an initial point and tangent at that point}"´\cite{ref:Struik} 
+To describe this in a mathematical way you would say that the geodesic curvature is zero in every point on the curve. The curvature of the curve can be devided into two parts where the geodesic part is the component that does not lie in the plane spanned by the tangent and the normal to the surface, see figure \ref{fig:GeoCurvature}. 
+
+The properties of the geodesic can be very useful in the field fabricating forms. The geodesics can for instance be used as the cutting patterns for tensile structures \cite{ref:Williams2}. It can also be useful for wooden lattice or gridshell structures, \textit{"...the manufacturing of laminated beams, which are much easier to
+make if the individual boards can simply be twisted and bent along the weak axis."}\cite{ref:Pottman}. It follows the same principle as the ribbons in the figure \ref{fig:ribbon}.
 
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.9\linewidth ]{figure/Theory/Denver.jpg}
-
 \caption{Airport of Denver with a membrane structure. You can see the cutting patterns of the structure. }
 \end{figure}
+
+This chapter is dedicated for classical differential geometry of smooth surfaces. It can be worth to make an exception to point out the relations for shortest paths, or a geodesic representation, on discrete surfaces. In the picture below is a polyhedron that is built up by different elements. The transitions between these surface patches are not smooth since the their exists no normal at these boundaries. It is therefore not possible to apply the above theory. There is though possible to determine a shortest path for a line that crosses discrete surfaces. When the line crosses the  boundary the angle on each side should be the same \cite{ref:ArchGeometry}, see figure below.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.35\linewidth ]{figure/Theory/shortpath.pdf}
+\includegraphics[width=0.35\linewidth ]{figure/Theory/shortpath2.pdf}
+\caption{\cite{ref:ArchGeometry} }
+\end{figure}
+
 
 \subsubsection{Normal and Geodesic Curvatures}
 
@@ -766,15 +771,17 @@ Previously it has been assumed that the curve linear coordinate system has been 
 
 This means that we can apply different kinds of curve linear coordinate systems which can be really useful. In the future we shall only use $\theta^1$ and $\theta^2$ describing the parameters whatever coordinate parameters used.
 
-\subsubsection{Geodesic Coordinates}
+\subsubsection{Geodesic Coordinates}\label{sec:geoCord}
 
-Geodesic coordinates were introduced and extensively used by Gauss in his \textit{Disquisitones} of 1827.(Struik)The foundation of the geodesic coordinates is the  \textit{geodesic form}.\\ 
-In Struik we can read \textit{"Equation \ref{geodesicForm} is called the 'geodesic form' of the line element and ($\theta^1,\theta^2$) form a set of 'geodesic coordinates'; or, for short, 'geodesic set'.On every surface we can find an infinte number of geodesic szets, depending on an arbeitrary curve $C_0$, along which the curves $\theta^2$ = constant can still be spaced in an arbitrary way."}\\
+The geodesic coordinates is based on two different sets of coordinates curve that forms what is called a geodesic set. The first set of curves are geodesics and the other set are curves that intersect the geodesics at an right angle, and is therefore called orthogonal trajectories to the geodesics. The parametric curves are choosen as $\theta^2 = constant$ and the orthogonal trajectories as $\theta^1 =constant$ \cite{ref:Williams}, see figure \ref{fig:geoCord}. \\
+
+ Struik\cite{ref:Struik} states that \textit{"Equation \ref{geodesicForm} is called the 'geodesic form' of the line element and ($\theta^1,\theta^2$) form a set of 'geodesic coordinates'; or, for short, 'geodesic set'.On every surface we can find an infinite number of geodesic sets, depending on an arbeitrary curve $C_0$, along which the curves $\theta^2$ = constant can still be spaced in an arbitrary way."}\\
 
 \begin{figure}[H]
 \centering
 \includegraphics[height=0.8\linewidth ]{figure/Theory/geodesicCoordRe.pdf}
-\caption{Redrawn picture from Struik }
+\caption{Redrawn picture from \cite{ref:Struik}  }
+\label{fig:geodesicCoord}
 \end{figure}
 
 
@@ -782,42 +789,34 @@ In Struik we can read \textit{"Equation \ref{geodesicForm} is called the 'geodes
     ds^2 = (d\theta^1)^2 + a_{22}(\theta^1,\theta^2)(d\theta^2)^2
 \end{equation}
 
-In the geodesic form it states that $a_{11} = 1$ and $a_{12}=a_{21} = 0$. This means that $\textbf{a}_1$ and $\textbf{a}_2$ are perpendicular everywhere on the surface. 
-
-Struik also states that the segments  on all geodesics included  between any to two orthogonal  trajectories are orthogonal.
-
-
-\begin{figure}[H]
-\centering
-\includegraphics[height=0.8\linewidth ]{figure/Theory/SurfGeodesics.pdf}
-\caption{The tangent differs depending of which direction you refer to. }
-\end{figure}
-
-This is possible to prove using Chris Williams approach to assume that you have a curve linear coordinate system where $a_{12} = 0$ and that $a_{22} = h^2 = constant$. That means that derivative must be equal to zero.
-
-\begin{equation}
-a_{12,2} = \textbf{a}_{1,2} \cdot \textbf{a}_2 + \textbf{a}_1 \cdot \textbf{a}_{2,2} = 0
-\end{equation}
-\begin{equation}
-a_{22,1} = 2\textbf{a}_{2} \cdot \textbf{a}_{2,1} = 2\textbf{a}_{2} \cdot \textbf{a}_{1,2} = 0
-\end{equation}
-
-so that
-
-\begin{equation}
-\textbf{a}_1 \cdot \textbf{a}_{2,2} = 0
-\end{equation}
-
-Which means that the coordinate curves $\theta^1 = constant$ are geodesics. 
-
-
-\subsubsection{Polar Geodesic Coordinates}
+The geodesic form states that $a_{11} = 1$ and $a_{12}=a_{21} = 0$. This means that $\textbf{a}_1$ and $\textbf{a}_2$ are perpendicular everywhere on the surface since $\textbf{a}_1 \cdot \textbf{a}_2 = 0$ . 
+Struik also states that the segments  on all geodesics included  between any to two orthogonal  trajectories are equal.
+\textit{ If geodesics be drawn orthogonal to a curve C, and segments of equal length be measured upon them from C, then the locus of their end points is an orthogonal trajectory of the geodesics.} This means that it should be quite easy to construct, or at least find the intersection points of, an orthogonal trajectory if there already exist a set of geodesics and at least on orthogonal trajectory. The picture below presents the idea graphically.
 
 \begin{figure}[H]
 \centering
-\includegraphics[height=0.5\linewidth ]{figure/Theory/polarGeodesicCoordMod.pdf}
+\includegraphics[width=1.0\linewidth ]{figure/Theory/geoDesicCoord2.pdf}
+\caption{redrawn from \cite{ref:Struik}   }
+\label{fig:geoCord}
+\end{figure}
+
+The proof of the geodesic form is done by both Stoker \cite{ref:Stoker} and Williams \cite{ref:Williams} and can be read in detail. A special case of geodesic coordinates is \textit{Polar geodesic coordinates}. The polar geodesic set is based on that the geodesics has their starting point in a point O,see figure \ref{fig:polargeo}, they become a radial set of curves. The orthogonal trajectories becomes a set of curves in the angular direction that cuts the geodesics at an right angle. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth ]{figure/Theory/polarGeo.pdf}
+\caption{Polar geodeisc coordinate redrawn from \cite{ref:Struik} }
+\label{fig:polargeo}
+\end{figure}
+
+The properties of the geodesic coordinates makes it interesting and useful for brick structures. The most important for brick patterns is that the height of the brick is made consistent everywhere. The nature that the orthogonal trajectories intersect the geodesic leaving equal length curves ensures this requirement. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[height=0.8\linewidth ]{figure/Theory/GeodesicBrick.pdf}
 \caption{The tangent differs depending of which direction you refer to. }
 \end{figure}
+
 
 
 \subsubsection{Equal Mesh Net Coordinates}
@@ -834,7 +833,11 @@ If the $a_{11} = a_{22} = L^2 = constant$ and $a_{12} = L^2\quad cos\alpha$ wher
 This is a powerful concept working on for instance lattice structures such as gridshells where you can assign a constant length to the members.
 
 
+
+
 \section{Form finding algorithms}
+
+The main concepts of form finding and under what circumstances it can be used is described in section \ref{sec:findingform}. This chapter will get into detail in how these equilibrium equations and the solving procedure.
 
 \subsection{Force Density}
 
@@ -902,7 +905,7 @@ For a computer program the process could be described in the following stages.
 \end{figure}
 
 
-\subsection{Thrust Network Analysis}
+\subsection{Thrust Network Analysis} \label{sec:TNA}
 
 The Thrust Network analysis was developed by Phillipe Block during his Phd. at MIT for design and analysis of  3 dimensional unreinforced masonry structures. It can be seen as an extension of the FDM for masonry structures and is placed under the branch \textit{Geometric Stiffnes Methods}. Main concepts of TNA could be described as the separation of horizontal of vertical equilibrium and the possibility to work with different equilibrium solutions through the principles of graphic statics. Block describes three different domains, the form diagram, $\Gamma$, in $\mathbb{R}^2$  , the reciprocal form diagram, $\Gamma^*$, in $\mathbb{R}^2$,  and the solution network $G$, in $\mathbb{R}^3$.
 
@@ -985,29 +988,43 @@ As the second key concept tells it is possible to describe the vertical equilibr
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.5\linewidth ]{figure/Theory/TNAScheme.pdf}
-\caption{The tangent differs depending of which direction you refer to. }
+\caption{Computational diagram for Thrust network analysis, redrawn from \cite{ref:ShellOpt} }
 \end{figure}
 
 \subsection{Dynamic Relaxation}\label{DR}
 
-The basic equation of dynamics is based on Newtons second law of motion. So the sum of all forces in the system is equal to the mass times acceleration.
+The main concept of dynamics is based on Newtons second law of motion, which means that the sum of all forces in the system is equal to the mass times acceleration.In statical problems it is always assumed  This means that the equilibrium equation can result in a residual force that can be translated into a motion.
 
 \begin{equation}
 \sum F = ma
 \end{equation}
 
-"Dynamic Relaxation was invented by \textit{ Alistar Day} in 1965 and is a numerical procedure that solves a set of nonlinear equations. Summarized, the technique traces the motion of the structure through time under applied load. The technique is effectively the same as the leapfrog and Verlet methods, which are also used to integrate Newton's second law through time.\\
-The basis of the method is to trace the step by step for small time increments, $\Delta t$, the motion of each interconnected node of the grid until the structure comes to rest in static equilibrium."
+Applying newtons second law it is possible to derive the equation of motion, \ref{eq:motion}, which is a second order differential equation and is the core of structural dynamics. \cite{ref:Dynamics}.
+
+\begin{equation} \label{eq:motion}
+ m\ddot{u}(t) + c\dot{u}(t) + ku(t) = p(t)
+\end{equation}
+
+
+$u(t)$ is the displacement parametrised by the time, $t$, and $\dot{u},\ddot{u}$ is first and second differentiation of $u$ with respect to time, $t$, $c$ refers to damping and $p(t)$ is the applied loading. The equation \ref{eq:motion} is referring to a single degree of freedom system that can be solved analytically. For large and complex systems this might not be possible and a numerical procedure must be applied. Dynamic relaxation is one of these types of numerical procedures and the basic concept can be described as,\textit{"The basis of the method is to trace the step by step for small time increments,$\Delta t$,the motion of each interconnected node of the grid until the structure comes to rest in static equilibrium."} \cite{ref:ShellOpt}
+
+
+\begin{figure}[H] 
+\centering
+\includegraphics[width=0.8\linewidth ]{figure/Theory/PartSpring.jpg}
+\caption{Different stages of a dynamic equilibrium model }
+\label{fig:DR}
+\end{figure}
 
 A typical flow diagram of dynamic relaxation can look like this. It is a modified version of one from Shell structures for architecture. That one is made for modelling a grid-shell so this one is a bit more general:
 
 \begin{figure}[H]
 \centering
 \includegraphics[height=1.2\linewidth ]{figure/Theory/DRScheme.pdf}
-\caption{Flow diagram for Dynamic Relaxation }
+\caption{Flow diagram for Dynamic Relaxation, redrawn from \cite{ref:ShellOpt} }
 \end{figure}
 
-It has been commonly used in engineering to find forms of equilibrium for membrane and shell structures. For the former the DR formulation is very dependent of the internal forces and the pretension its elements or boundaries. Shells on the other hand is very dependent of the external loads and has a dominant gravity force applied.Though you can really model any kind of loading as long it imposes a force on the nodes or particles.
+It has been commonly used in engineering to find forms of equilibrium for membrane and shell structures. For the former the DR formulation is very dependent of the internal forces and the pretension its elements or boundaries. Shells on the other hand is very dependent of the external loads and has a dominant gravity force applied.Though you can really model any kind of loading as long it imposes a force on the nodes or particles. In the thesis of 
 
 \subsubsection{Combined form-finding and cutting patterns of tensile structures}
 
@@ -1033,6 +1050,46 @@ $T$ is the surface tension and $a^{\alpha \beta}$ is the metric tensor. In addit
 \caption{Flow diagram for Dynamic Relaxation }
 \end{figure}
 
+\section{Discrete formulations}
+\subsection{Discrete Differential Geometry}
+
+In the previous chapter Classical Differential Geometry was presented, which implies that the surfaces are smooth and regular. The field of Discrete Differential Geometry(DDG) does not work with smooth surfaces, i.e you have a continuous function of the normal of the surface in each point, but with discretized into elements in what is called a polygon mesh. A polygon mesh consists of faces, edges and vertices's. The faces are usually triangles or quadrilaterals. Below one can see a surface that  is discretized into a mesh representation with quadrilaterals.
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\linewidth ]{figure/Theory/polygonMesh.jpeg}
+\caption{A surface, or solid, is discretized into a course and finer mesh representation}
+\end{figure}
+
+One can say that DDG is a merged concept of the fields of CDG and Discrete Geometry, where DDG imitates the concepts of CDG in a discrete environment.
+\textit{ Whereas classical differential
+geometry investigates smooth geometric shapes (such as surfaces), and
+discrete geometry studies geometric shapes with finite number of elements
+(such as polyhedra), the discrete differential geometry aims at the development
+of discrete equivalents of notions and methods of smooth surface
+theory.} \cite{ref:discrete}
+
+An interesting example for the thesis is the DDG equivalent to a geodesic, or shortest path,  where the CDG states that the geodesic curvature should be zero in all points for curve to be a geodesic. To determine a geodesic equivalent in DDG one say that the line should intersect the edges of the mesh faces at a similar angle on both sides\cite{ref:ArchGeometry}, see figure below.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.35\linewidth ]{figure/Theory/shortpath.pdf}
+\includegraphics[width=0.35\linewidth ]{figure/Theory/shortpath2.pdf}
+\caption{\cite{ref:ArchGeometry} }
+\end{figure}
+
+\subsection{Correlation between continuous and discrete}
+
+There are two parts of equivalent. One is a equivalent definition of the concept and as above, and one thing is if you can say that it is equivalent for your continuous case, if this polyhedra above was a discrete representeation of a smooth surface. This has to do with the properties of geometry and the mesh-fineness. What one could say that for a certain size of the faces this equal enough smooth surface equivalent. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.0\linewidth ]{figure/Theory/polysphere.pdf}
+\caption{ }
+\end{figure}
+
+This kind of reasoning should not be unfamiliar for structural engineers since it is the same logic as Finite Element Method. And there are many other examples such that brick structures is a discrete representation of surface, dynamic relaxation is also a discrete solving procedure of dynamic problems and so on. 
 
 \section{Shell Theory}
 
@@ -1171,13 +1228,8 @@ If we choose a rectangular Cartesian coordinate system we can simplify the expre
 
 This is the equation you can read in books the famous book \textit{Theory of Plates and Shells} by Timoshenko and Woinowsky-Krieger for membrane stresses in shells. They use and \textit{F} instead of $\phi$ for stress functions.
 
-\subsubsection{Airy Stress Functions}
 
-    
-\begin{equation}
-\sigma_x = \frac{\partial^2\phi}{\partial y^2}, \sigma_y = \frac{\partial^2\phi}{\partial x^2}, \sigma_{xy} = \frac{\partial^2\phi}{\partial x \partial y}
-\end{equation}
-\newpage
+
 \section{Compatibility of Differential geometry and Membrane theory}
 
 In the paper Air supported structure the state of art Williams present a technique to combine form finding with the generation of cutting patterns for tensile structures, i.e finding shapes of equilibrium that applies geodesic coordinates where one of the set curves are geodesics. 
