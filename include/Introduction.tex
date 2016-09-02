@@ -1,80 +1,107 @@
 % CREATED BY DAVID FRISK, 2015
 \chapter{Introduction}
 
-Two of my favorite are artists and craftsmen through history is Michelangelo and Caravaggio, which in not any sense make me unique. Seeing a sculpture as Pieta or a painting like “The Taking of Christ” give me great pleasure in different ways. The human emotions and the flesh is fully exposed and I feel like an observer of a frozen moment in time. This amazing sense of forms in space and the contradiction of the raw material and the perfect product makes it so fascinating, from dead to alive. 
-While Michelangelo works in the three dimensional space Caravaggio works on a two dimensional canvas. With an extraordinary understanding of light and texture these strokes and dots of paint projects the scene as hologram in space. Layer upon layer builds up the painting and depending and depending on the distance and angle it can behave very differently, and at close it is sometimes not even incomprehensible.
+One brick layer once said, locking at his recently finished plastered facade, "is it not amazing what one can do with just a piece of wooden board". It somehow tells the simplicity of the craft in contradiction to the sometimes extreme complexity of the results. The development in this craft is a slow train and sometimes it feels like it stopped some hundreds of years ago. Stopped and left the secrets with them of how they managed with such simple tools and material build such complex structures. Looking at a brick, holding it in your hand it feels heavy and working with it for a long time your fingers might start hurting. The size and format could not be less elegant and the look of it is at first almost feels dull. Looking more closely you can see the tags and deformity from the production and all bricks feels individual almost. You cannot really judge a brick by itself, it belongs to a composition of individuals each with its unique features, and together it finds its context and forms a structure.
 
 \begin{figure}[H]
 \centering
-\includegraphics[height=0.39\linewidth ]{figure/Introduction/Mich.jpg}
-\includegraphics[height=0.39\linewidth ]{figure/Introduction/Caravaggio.jpg}
-\caption{Michelangelo and Caravaggio}
+\includegraphics[width=0.8\linewidth ]{figure/Introduction/Brick.jpg}
+\caption{Brick and mortar forming a connection between a column and an opening. From a workshop in brick laying.}
 \end{figure}
 
-
-Similar challenges have master builders through time been facing. Creating master pieces that should not only be pleasing but also functional and obey the laws of physics. The stone vaults of the Hotel de Ville in Arles completed 1676 is one of the most complex constructions. It includes complex global geometry and also a discretization and fabrication of these elements. As with Pieta it is a fascinating play with forms and a strive for perfection making stone elements looking smooth and light.
+Until this day we have quite hard to understand these structures. The mechanics of shells can be very complex and the material properties differ from what most modern engineers are comfortable with. The master builders must have had a great sense of geometry, both in terms of surfaces propagating in space but also the tessellation of complex forms. Until this day we cannot fully explain the theoretical aspects of their intuition. 
+To find a theoretical explanation one must understand how they work, how the material works and the math and mappings of three dimension surfaces in space. This thesis will investigate modern methods in describing brick patterns on complex surfaces. 
 
 
 \begin{figure}[H]
 \centering
-\includegraphics[height=0.35\linewidth ]{figure/Introduction/Arles4B.jpg}
-\includegraphics[height=0.35\linewidth ]{figure/Introduction/StairGuastavino.jpg}
-\caption{Michelangelo and Caravaggio}
+\includegraphics[width=0.8\linewidth ]{figure/Introduction/GuastovinoStair.jpg}
+\caption{Megalith tomb, Er-Mané,Carnac,Brittany,France,ca 4200 BCE\cite{ref:WorldHistory}}
 \end{figure}
 
-Looking at a similar material, the brick, it is to some extent similar to stone but instead of the smoothness and perfection it posses many different layers. Zooming in at brick structure you will sense the many irregularities that comes together as  perception of the perfect geometry. A brick layer senses the imperfection and translates it to a distance perspective, as of Caravaggio must have done.
+
+\section{Purpose} 
+The  purpose of this thesis is to investigate the possibility of using the concepts of differential geometry to generate the patterns for bricklaying on compressive shell forms. The report will integrate the fields theory of differential geometry, theory of shells, theory of masonry structures and computational methods. The theoretical framework will therefore be divided in four parts:\\
+\begin{enumerate}
+    \item \textit{Theory structural masonry} - This will be based on a plastic design approach used for assessment and understanding of complex historical masonry structures such as cathedrals. The theory differs from traditional structural engineering practice due to the nature of the masonry composition where stresses in structure cannot be read in the same way.   
+    \item \textit{Differential geometry} - This section will explore the basics of differential geometry which includes the elementary theory related to curves and surfaces. This is a necessity for understanding the theory of free-form shells. The part will also include parts that are not directly related but can be confusing if not explained, for instances there are different types of curvature for surfaces and curves and it is necessary not to mix them up.
+    \item \textit{Theory of free-form membrane shells} - This section will describe the theory of free-form shells in a approach understandable for the structural engineer. This complex theory is usually used by mechanical engineers and no attempts has been done to explain in the concepts for the structural engineer.
+    \item \textit{Computational methods} - This section will explain how computational methods can be used to find solutions when the analytical solutions based on the theory above can´t or is very hard to achieve.
+\end{enumerate}
+
+
+\section{Limitations} \label{Section_ref}
+
+This report will only concern brick structures, meaning module blocks with the same dimensions, and not other types of masonry structures such as stone or concrete. The structural theory though applies to all masonry structures. The report will concern compressive brick shell structures and not conventional brick structures. Compression structures meaning in this case structures where the form ensures equilibrium in compressive axial forces and where reinforcement is not necessary in theory. The forms generated are of conceptual nature meaning that no detailed calculations or instability checks are made, such as buckling. \\ 
+
+The implementations will be programmed in a parametric development environment,but no effort will be made to develop and evaluate different parametric design processes. The code will be implemented using the object-oriented language C\#. The methods are though general and should be possible to implement using most languages. 
+
+\section{Method} \label{Sec:method}
+
+Below is a description a process and its  different stages that will be the guide of the work of this thesis.
+
+\begin{enumerate}
+
+\item \textit{A literature review} will be executed which investigates historical and new knowledge and research in the fields related to masonry structures: tessellation and geometry,form and function, production  and computational methods. The literature review will be the foundation that with a contextual view of different areas crystallizes into a research question.
+\item \textit{ An in depth theoretical study and gathering} will be done in fields coinciding with relevance for the research question developed in previous stage and the limitations made.  
+\item From the theoretical foundation \textit{a process or method} will be made as a possible way of achieve or answer the research question made.
+\item The method will be implemented and the results will be presented. The results will be the foundation of a \textit{discussion} that reviews the method and the validity of the results.
+\item A list of possible areas of improvements and possible future research will be presented.
+\end{enumerate}
+
+
+\section{Literature Review}
+
+This section will describe the thesis background an contextual perspective of the subjects. It will give a broader picture and contextual position of the research question in history and research. This section will touch upon the following subjects
 
 \vspace{5mm}
-
-There are still some uncertainties for us today regarding masonry structures in the category of shells and vaults. We do not always know how they are performing and if they are safe. The stone cutting of Hotel de Ville was made with the help of graphical method of stereotomy, but how did the bricklayers know how to construct and cover complex shapes with bricks. It can sure be intuition but there must be a way to discover that through geometry and computational methods.
-
-
-
-
-
-\section{Context}
-This section will give a contextual perspective of the subjects in the thesis. It will define some of the concepts
-
-
+\begin{itemize}
+\item History of Masonry
+\item Modern history of brick shells
+\item Shell structures in general
+\item Form generation
+\item Computational methods and design
+\item Properties, making and craftsmanship of brick structures
+\item Geometry
+\end{itemize}
 
 \subsection{Masonry}
 
-Masonry can be read as the art and craft of building in stone, clay, brick or concrete block \cite{ref:brickBrit}. These elements can be of various shapes and configured and placed on one another to form a stable structure. It can be a collection of dry elements, meaning no mortar to connect the elements, or using some type of mortar to bind the pieces together. 
-
+Masonry can be read as the art and craft of building in stone, clay, brick or concrete block \cite{ref:brickBrit}. These elements can be of various shapes and configured and placed on one another to form a stable structure. It can be a collection of dry elements, meaning no mortar to connect the elements, or using some type of mortar to bind the pieces together. Masonry structures common structural behaviour is that they work in compression under gravitational loads. This section will give a historical background to masonry and brick structures.
 
 
 \subsubsection{Early history of Masonry}
-Masonry is a very old tradition in the history of mankind. One of the oldest findings of masonry is  chambered tombs that is  dry-wall masonry(stones laid without mortar) with corbels roofs constructed in Spain and France, dated to ca 4200 BCE\cite{ref:buildConstrBrit}. 
+Masonry is a very old tradition in the history of mankind. One of the oldest findings of masonry is  chambered tombs that is  dry-wall masonry(stones laid without mortar) with corbels roofs constructed in Spain and France, dated to ca 4200 BCE\cite{ref:buildConstrBrit}. Below is a drawing of the Megalith tomb, Er-Mané,Carnac,Brittany,France,ca 4200 BCE, one of the first findings of masonry structures.  
 
 \begin{figure}[H]
 \centering
 \includegraphics[height=0.4\linewidth ]{figure/Introduction/oldMasonry2.pdf}
-\caption{Megalith tomb, Er-Mané,Carnac,Brittany,France,ca 4200 BCE\cite{ref:WorldHistory}}
+\caption{ Megalith tomb, Er-Mané,Carnac,Brittany,France,ca 4200 BCE, one of the first findings of masonry structures.\cite{ref:WorldHistory}}
 \end{figure}
 
 Later, about 3000 BCE in Mesopotamia, the first fired bricks appeared, which was a development from the sun dried mud brick used even earlier.
 Egypt also built it cities with using of mud bricks, but they unlike Mesopotamia or the Indus valley, had excellent deposits of stone exposed above ground; limestone, sandstone, and granite were all available.
-Therefore a new technology of cut-stone construction emerged in the temples and pyramids of the 4th dynasty (c. 2575–c. 2465 bce)\cite{ref:buildConstrBrit}. 
+Therefore a new technology of cut-stone construction emerged in the temples and pyramids of the 4th dynasty (c. 2575–c. 2465 bce)\cite{ref:buildConstrBrit}. Below is an example from the First court of Ramses II in the Temple of Luxor.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.9\linewidth ]{figure/Introduction/EgyptArchitecture.jpg}
-\caption{Relief depicting god Amun with great helmet covered with two large feathers and beard sitting on the throne. First court of Ramses II. New Empire. Temple of Luxor. Egypt.,Prisma / Universal Images Group
+\caption{A Relief depicting god Amun with great helmet covered with two large feathers and beard sitting on the throne.from the First court of Ramses II in the Temple of Luxor in Egypt. An example of the stone cutting methods developed and used in early history of Egypt architecture.,Prisma / Universal Images Group
 }
 \end{figure}
 
-The Romans inherited and refined those building technologies used in earlier civilisations. Even though Romans did master stone masonry it was the brick that would be the most used material. This is due to the big industry that had been emerged and that it became a much more cheap material. Mortar had been used previously in the sense of sand, lime, and water. The Romans introduced a new component in the beginning of the 2nd Century which we now call pozzolana. The combination of lime and pozzolana made the mortar into a natural cement. This made it much stronger and weather resistant and it would prove to even harden under water. Pozzonlanic mortars became a very popular and cheap material and when mixing it with stones it got those properties of concrete\cite{ref:buildConstrBrit}. The most famous example of concrete structures is Pantheon in Rome, which is a dome made of concrete blocks.
+The Romans inherited and refined those building technologies used in earlier civilisations. Even though Romans did master stone masonry it was the brick that would be the most used material. This is due to the big industry that had been emerged and that it became a much more cheap material. Mortar had been used previously in the sense of sand, lime, and water. The Romans introduced a new component in the beginning of the 2nd Century which we now call pozzolana. The combination of lime and pozzolana made the mortar into a natural cement. This made it much stronger and weather resistant and it would prove to even harden under water. Pozzonlanic mortars became a very popular and cheap material and when mixing it with stones it got those properties of concrete\cite{ref:buildConstrBrit}. The most famous example of concrete masonry structures is Pantheon in Rome, which is a dome made of concrete blocks.
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.9\linewidth ]{figure/Introduction/PantheonInt.jpg}
-\caption{Pantheon, Neil Emmerson / Robert Harding World Imagery / Universal Images Group
+\caption{The dome and oculus of Pantheon in Rome built by the Romans, an early example of masonry concrete shells made of concrete blocks, Neil Emmerson / Robert Harding World Imagery / Universal Images Group
 Rights Managed / For Education Use Only, Wikipedia}
 \end{figure}
 
 
 \subsubsection{Historic Forms of Masonry Shells} \label{sec:masonryShells}
 
-The shape of the shell can as Heinz Izler proved take many different shapes. In history of masonry the selection of shells have been restrained to a few. These usually based on rotational surfaces cut by planes or by other rotational surfaces.They can also be combinations of two types of vaults. In the figure below it is possible to see some of the most common from a Swedish book \cite{ref:murning}. Translations are based on a dictionary for architecture \cite{ref:lexi}.
+The shape of the shell can take many different shapes as seen in figure \ref{fig:shells}.Though in history of masonry the selection of shell forms have been restrained to a few. These usually based on rotational surfaces cut by planes or by other rotational surfaces.They can also be combinations of two types of vaults. In the figure below it is possible to see some of the most common from a Swedish book \cite{ref:murning}. Translations are based on a dictionary for architecture \cite{ref:lexi}.
 
 
 \begin{figure}[H]
@@ -103,15 +130,10 @@ The shape of the shell can as Heinz Izler proved take many different shapes. In 
 
 
 
-The structures of vaults and domes has a strong position in most historic description of Architecture. Two names that stand out in modern time architecture in this genre are \textit{Rafael Guastavino} and \textit{Eladio Dieste}. They are seen as the main contributors to revolutionise the structural arts of masonry shells and take it into the modern era. 
-"Until late in the nineteenth century, masonry vaulting was shaped and proportioned by guesswork or rules of thumb. As a consequence, vaults based on the European or Middle Eastern precedents tended to be not only thick but also heavy and expensive. Catalan vaults were much thinner but were also designed by wholly intuitive methods."
-Instead of rely on intuition Guastavino used \textit{graphic statics} which was a relatively new method at the time to describe and understand force patterns of structures. Graphic statics made it possible to visualise the optimal shape of vaults and trusses. This in combination with the technique of catalan vaults made it possible to construct very slender structures. "Although Guastavino patented techniques for both reinforcing and post-tensioning, most of his roofs were constructed of unreinforced masonry"
+The structures of vaults and domes has a strong position in most historic description of Architecture. Two names that stand out in modern time architecture in this genre are \textit{Rafael Guastavino} and \textit{Eladio Dieste}. They are seen as the main contributors to revolutionise and modernise the structural arts of brick shells. Both working with bricks Guastavino is most recognised for his implementation of the new grapichal methods emerging during the late nineteenth century that enabled the design of optimal shell forms. Dieste was active during the 20th century and is mostly known for the new forms of brick shells enabled by using steel reinforcement.
 
-
-
-
-
- John Oschendorf describs the legacy of the Guastavino Company \textit{"With complex three dimensional vaults, supported by carefully placed stiffening walls, flying buttresses, and tension ties, the Guastavinos worked as master masons in the modern era"} 
+Prior to the nineteenth century the shapes of and proportions of masonry shells was based on experience and intuitive methods. These resulted in over dimensioned vaults that was not only heavy but also uneconomical\cite{ref:Dieste}.  
+Instead of rely on intuition Guastavino used \textit{graphic statics} which was a relatively new method at the time to describe and understand force patterns of structures. Graphic statics made it possible to visualise the optimal shape of vaults and trusses. This in combination with the technique of catalan vaults made it possible to construct very slender structures without much form-work.
 
 \begin{figure}[H]
 \centering
@@ -120,7 +142,7 @@ Instead of rely on intuition Guastavino used \textit{graphic statics} which was 
 \caption{Tile vaulted staircase of Baker Hall, Carnegie Mellon University, Pittsburgh, 1914. Courtesy of Michael Freeman.}
 \end{figure}
 
-Dieste did in comparison to Guastavino use formwork during construction and worked only with steel reinforced and often post tensioned structures.Instead of using Graphic Statics Dieste used numerical methods to design his structures. "Dieste’s building structures fall into four general categories, none of which was feasible in Guastavino’s time."
+Dieste did in comparison to Guastavino use form-work during construction and worked only with steel reinforced and often post tensioned structures. Guastavino also patented methods for post-tensioning and reinforced structures but most of his shells are unreinforced. Instead of using Graphic Statics Dieste used numerical methods to design his structures. The trademark works of Dieste can be categorised into four families based on the shape of the vaults and surfaces\cite{ref:Dieste}, which can be seen illustrated in figure below.
 
 \begin{itemize}
 
@@ -132,11 +154,11 @@ Dieste did in comparison to Guastavino use formwork during construction and work
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.4\linewidth ]{figure/Introduction/DiesteFour.JPG}
-\caption{The four categories of Dieste Eladio Dieste: innovation in structural art}
+\includegraphics[width=0.6\linewidth ]{figure/Introduction/DiesteFour.JPG}
+\caption{The four categories of shells of Dieste. On the top is the Gaussian vaults. Second from the top is the self supporting shells. And in the bottom the folded, left, and ruled surfaces to the right. These type of brick structures was not feasible without the use of reinforcement and post-tensioning.\cite{ref:Dieste}}
 \end{figure}
-
-"There were others as well who built with reinforced brickwork, but two things set Dieste’s work above the rest. One is his unmatched use of masonry in structures subject to bending, such as cantilevered barrel shells, tanks under hydrostatic pressure, and folded plates. The other is the power and poetry of his masonry architecture."
+There are other engineers and architects that have worked with reinforced brick structures, but Dieste managed to refine the arts and combining these techniques in an architectural context. 
+\textit{"There were others as well who built with reinforced brickwork, but two things set Dieste’s work above the rest. One is his unmatched use of masonry in structures subject to bending, such as cantilevered barrel shells, tanks under hydrostatic pressure, and folded plates. The other is the power and poetry of his masonry architecture."}\cite{ref:Dieste}
 
 
 Important contemporary initiatives to develop the art and understanding masonry shells is the Block Research Group at ETH in Zuring which is directed by professor Philippe Block and Dr. Tom Van Mele. BRG has since the start specialized in the field of computational methods applied to masonry and concrete shells. Their research have enabled new forms of equilibrium masonry shells that previously was not possible previously. Below is a project that was built on the ETH campus by BRG where the free form shape was designed and validated using Thrust Network Analysis,which was developed by Block under the guidance of John Oschendorf at MIT. \cite{ref:Davis} To read more about TNA read section \ref{sec:TNA}. 
@@ -149,61 +171,55 @@ Important contemporary initiatives to develop the art and understanding masonry 
 
 \subsection{Shell Structures}
 
-Vaults, cones and domes are the forms that are typically associated as shell structures. In architecture it is common for shell structures to consist of concrete bricks and stone. In modern times it can be reinforced using steel but historically it has been unreinforced. A shell could also be a car or plane body or a birds' eggs. Williams \\
+Vaults, cones and domes are the forms that are typically associated as shell structures in architecture. In architecture it is common for shell structures to consist of concrete bricks and stone. In modern times it can be reinforced using steel but historically it has been mostly unreinforced. Shells in general has many different applications than architecture. In our everyday lives we are more likely to get in contact with shells of other types such as car bodies or egg shells.
 
-Mentioning the most obvious shell form there are many different shapes of the shell, described by Heinz Isler.
+Mentioning the most obvious shell form there are many different shapes of the shell, described by Heinz Isler in his paper \textit{New Shapes for Shells}, see figure below.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.6\linewidth ]{figure/Introduction/ShellDiagram.jpg}
-\caption{Shell diagram over different types of shell by Heinz Isler}
+\caption{Shell diagram over different types of shell by Heinz Isler from his paper \textit{New Shapes for Shells}. It shows the diversity of shells in comparison to traditional shells that have been restricted to a few different forms}
+\label{fig:shells}
 \end{figure}
 
-As Williams state there are many ways to describe a shell, but the most obvious definition might be through its geometry.
+How would one describe shells other than in mentioned examples above. Two aspects that are common is through its geometry and its structural action. One can say that shells are curved thin objects that transforms external loads to work within the shell using mostly membrane action.
 
-"A shell is a structure defined by a curved surface it is thin in the direction perpendicular to the surface, but there is no absolute rule as to how thin it has to be. It might be curved in two directions, like a dome or a cooling tower, or it may be cylindrical and only curve in one direction." Williams Architecture Shell.
-
-In the book Shell Structure you can read this definition of a shell structure taking its.
-
-"Shell Structures are constructed systems described by three-dimensional curved surfaces, in which one dimension is significantly smaller compared to the other two. They are form-passive and resist external loads predominately through membrane stresses." Introduction 
-
-A form-passive structure meaning that you do not experience much degrees of change of shape or form. Where a form-passive would break under high deflection a form-active can adapt to a new equilibrium state like cables or membrane structures. Source needed? 
+\textit{"A shell is a structure defined by a curved surface it is thin in the direction perpendicular to the surface, but there is no absolute rule as to how thin it has to be. It might be curved in two directions, like a dome or a cooling tower, or it may be cylindrical and only curve in one direction."}  \cite{ref:ShellOpt}
 Membrane stress and membrane structures should not be mixed up. Membrane condition is when the forces are mainly carried in the plane of the shell surface. Membrane stresses can be in compression, tension or a combination of them both. \\
 
 
-
-In the book Shell structures for Architecture optimisation it distinguish between three types of geometries for Shell Structures, and defined as following.
-
-
-
+Since their are so many types and shapes of shells it can be convenient to categorize them into different families or branches. One can say that it is possible to derive the form of the shells based on three paradigms. \cite{ref:ShellOpt} 
 
 \begin{itemize}
-\item Freeform, free-curved or sculptural shells are generated without taking into consideration structural performance.  
-\item Mathematical, geometrical or analytical shells are directly described by analytical functions.These functions are of then chosen for their convenience in performing further analytical calculations and their ability to describe a shell's shape for fabrication purposes.
-\item Form Found shells include natural, hanging shapes assosiated with funicular structures of Antoni Gaudi, Frei Otto and Heinz Isler, but also "strained" gridshells tat feautre bending stresses. Their final shape is a result of attaining a state of static equilibrium.
+\item \textit{Freeform, free-curved or sculptural shells} - These shells are generated without taking into account logic or structural action performance.   
+\item \textit{Mathematical, geometrical or analytical shells} - These shapes have be derived directly from mathematical expressions of surfaces, such as for instance the hyperparaboloid. The choose of these  expressions can be based on parameters such as accurate geometrical analyses or sleek fabrication strategies. 
+\item \textit{Form Found shells} - These are shells that have their form described by structural performance. They can have been generated using on of the form finding techniqeus described in \ref{sec:findingform}. One can say in general that the shape coincides with a state of static equilibrium.
+
 \end{itemize}
 
 
 
 \subsubsection{Gridshells}
 
+A special type of shell is what is called a grid shell. It can be seen as a discretised version of a continuous shell consisting of a network of bars or beams.
 
-"A gridshell is essentially a  shell with its structure concentrated into individual members in a relatively fine grid compared to the overall dimensions of the structure. The members may be short and only pass from node to node, or they may be continuous, crossing each other at the nodes. The grid may have more than one layer, but overall thickness of the shell is small compared to the overall span" p89
+\textit{"A gridshell is essentially a  shell with its structure concentrated into individual members in a relatively fine grid compared to the overall dimensions of the structure. The members may be short and only pass from node to node, or they may be continuous, crossing each other at the nodes. The grid may have more than one layer, but overall thickness of the shell is small compared to the overall span"} \cite{ref:ShellOpt}
 
-Common materials for gridshells have been timber and steel. Examples of timber gridshells are Mannheim Multihalle, by Frei Otto, Downland Gridshell and 
+Gridshells gives the possibility and free-dome to elaborate with different panels that are inscribed inside the bars and beams. That makes it a bit more versatile since it easily can let in light using for instance glass panels. This might be why it has been more frequently used than traditional shells. \\
+The most common materials for gridshells have been timber and steel. Examples of timber gridshells are Mannheim Multihalle, Downland Gridshell and the roof of The Savill Building. The British Museum court roof is an example of a steel gridshell.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.3\linewidth ]{figure/Introduction/DownlandC.jpg}
 \includegraphics[width=0.3\linewidth ]{figure/Introduction/Downland.jpg}
 \includegraphics[width=0.3\linewidth ]{figure/Introduction/Savill.jpg}
-\caption{Multihalle and Downland Gridshell}
+\caption{Three examples of wooden gridshells. From the left \textit{Mannheim Multihalle}, \textit{ Downland Gridshell} and the roof of the \textit{Savill Building}.}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.9\linewidth ]{figure/Introduction/TheGreatCourt.jpg}
-\caption{British Museum court roof}
+\caption{British Museum court roof is an example of a steel gridshell}
 \end{figure}
 
 
@@ -212,51 +228,58 @@ Common materials for gridshells have been timber and steel. Examples of timber g
 \subsection{Geometrical Challenges}
 
 
-
-It is very tempting to try as a designer to map patterns made on paper onto a 3d shape. Take the finished drawing and drape it onto the surface. That would for many reasons be very effective. The most prominent one is that one could build 3d dimensional surfaces or objects with single element and it would give a big free-dome to the designer. The problem is that it merely impossible, unless you have say a cylinder, you can always role a paper into a cylinder, it is just not that fascinating. 
+Mathematical mappings has been an area of interest historically for many different reasons.  It is for instance very tempting to attempt to map patterns made on paper onto a three dimensional shape. Take the finished drawing and drape it onto the surface. That would for many reasons be very effective. The most prominent one is that one could build 3d dimensional surfaces or objects with single element and it would give a big free-dome to the designer. The problem is that it merely impossible, unless you have say a cylinder, since  one can always role a paper into a cylinder. 
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\linewidth ]{figure/Introduction/drape.jpg}
-\caption{}
+\caption{Trying to drape a plane onto a surface }
 \end{figure}
 
-This is not a problem only concerning architects and engineers. Since we started travelling and using maps as guides this has somewhat been a problem, how do you make something that has the shape of a sphere two dimensional?A solution to this problem was discovered by  \textit{Gerardus Mercator} in 1569, a so called \textit{Mercator Projection}\cite{ref:merc}. This is basically a method to project a sphere onto a cylinder that can be unrolled to a plane. This is of course not true since the projection becomes different depending on your distance to the equator, and the poles can not even be projected. 550 years later this method is still used in applications such as \textit{Google Maps}\cite{ref:maps}. This proves that even for such simple shape as the sphere it is really hard finding a mathematical solution. Going back to architecture there is a big difference and that is that the geometry does not have to be sphere, it just need to look like it. A brick corner is never perfectly straight due to irregularities in the stone or mortar, but we observe it as straight. This gives a bit more free-dome to tweak the mathematics and allow some deviance from the mathematical shape to suit the kind of structural representation of choice. Mercator still present today proves though that we always should enter the field of geometry mapping with soft and humble eyes. Sometimes reality is hard, and that is ok.
+This is not a problem only concerning architects and engineers. Since we started travelling and using maps as guides this has somewhat been a problem, how do you map a grid that is applied on a sphere into a two dimensional map?A solution to this problem was discovered by  \textit{Gerardus Mercator} in 1569, a so called \textit{Mercator Projection}\cite{ref:merc}. This is basically a method to project a sphere onto a cylinder that can be unrolled to a plane. This is of course not a perfect method since the projection becomes different depending on your distance to the equator, and the poles cannot even be projected. 550 years later this method is still used in applications such as \textit{Google Maps}\cite{ref:maps}. This proves that even for such simple shape as the sphere it is really make efficent mathmatical mappings. Going back to architecture there is a big difference and that is that the geometry does not have to be sphere, it just need to look like it. A brick corner is never perfectly straight due to irregularities in the stone or mortar, but we observe it as straight. This gives a bit more free-dome to tweak the mathematics and allow some deviance from the mathematical shape to suit the kind of structural representation of choice. Mercator still present today proves though that we always should enter the field of geometry mapping on three dimensional surfaces with sense of respect for its difficulties.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.9\linewidth ]{figure/Introduction/Mercator.jpg}
-\caption{The length of the curve is the same regardless of coordinate system.Cylindrical Projection on the Earth. [Illustration]. Encyclopædia Britannica ImageQuest}
+\caption{An illustration of the Mercator projection which maps the sphere coordinates onto a plane, which has and still is used in modern applications such as Google Maps\cite{ref:maps} to illustrate the coordinates of the earth onto a two dimensional map. [Illustration]. Encyclopædia Britannica ImageQuest}
 \end{figure}
 
 
 
 \subsubsection{Stereotomy }
   
-Stereotomy is defined as "the science or art of cutting solids into certain figures or sections". It includes, and the term is sometimes used as a synonymous with, the art of cutting stones for masonry shells. From Notes of Stereotomy.
+Long before computers practitioners of stereotomy managed to create structures and patterns of very complex surfaces. The book \textit{"Le premier tomede l'Architecture"} was released in 1567 by \textit{Philibert de l'Orme} and is considered to contain the first decription and defintion of stereotomy\cite{ref:stereotomy2}. 
+Stereotomy is defined as "the science or art of cutting solids into certain figures or sections". It includes, and the term is sometimes used as a synonymous with, the art of cutting stones for masonry shells. \cite{ref:Porter}. Even though miss-used sterotomy is not the science of cutting stone but more the theoritical and mathematical construction of these shapes and solids.
+\textit{"This is a practice not so much concerned with the actual physical means to cut through stone, but with the intellectual means to find the correct shapes to be produced."}\cite{ref:stereotomy2}. in figure \ref{fig:stereo} one can see an example of sketches and drawings of shapes that are constructed by different kinds of solid elements. One of the most famous examples in architeture is Hotel de Ville by \textit{Jules Hardouin Mansart}, see figure below \ref{fig:stereo2}.
+
+ 
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.45\linewidth ]{figure/Introduction/NotesonStereotomy.JPG}
-\includegraphics[width=0.45\linewidth ]{figure/Introduction/NotesonStereotomy2.JPG}
-\caption{The length of the curve is the same regardless of coordinate system.}
+\includegraphics[width=0.35\linewidth ]{figure/Introduction/NotesonStereotomy.JPG}
+\includegraphics[width=0.35\linewidth ]{figure/Introduction/NotesonStereotomy2.JPG}
+\caption{Sketches and drawings from a notebook of Stereotomy from 1896 showing how structures are discretized and how those elements are constructed.\cite{ref:Porter}}
+\label{fig:stereo}
 \end{figure}
 
-It was used early as an tool for subdividing shapes into building elements that would be able to cut and fit together. Wellknown in this field is Philibert de l'Orme from France that was active during the 16 th century. Long before computers practitioners of stereotomy managed to create astonishing structures and patterns of very complex surfaces.
+
+
+
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.90\linewidth ]{figure/Introduction/Arles.jpg}
-\caption{The length of the curve is the same regardless of coordinate system.}
+\includegraphics[width=0.70\linewidth ]{figure/Introduction/Arles.jpg}
+\caption{The stone vault at Hotel de Ville by \textit{Jules Hardouin Mansart} is a famous example of stereotomy in architecture}
+\label{fig:stereo2}
 \end{figure}
 
-This techniques are not very common today since it involves quite complex building elements that need to be manufactured. Though it is possible to read the research of the Block research group where they have investigated in how to use computational methods and digital fabrication to achieve this structures.
+These methods are not very common today since it involves quite complex building elements that need to be manufactured. Though it is possible to read the research of the Block Research Group where they have investigated in how to use computational methods and digital fabrication to generate these kind of geometries.Picture below show how geometry and solids are generated digitally\cite{ref:Rippmann} and  finished stone blocks that are digitally fabricated\cite{ref:Rippmann2}. 
 
 \begin{figure}[H]
 \centering
 \includegraphics[height=0.50\linewidth ]{figure/Introduction/StereoBlock2.JPG}
 \includegraphics[height=0.35\linewidth ]{figure/Introduction/StereoBlock.JPG}
-\caption{The length of the curve is the same regardless of coordinate system.}
+\caption{This figure show how blocks can be generated from a discrete surface representation with computational methods \cite{ref:Rippmann} }
 \end{figure}
 
 
@@ -264,7 +287,7 @@ This techniques are not very common today since it involves quite complex buildi
 \begin{figure}[H]
 \centering
 \includegraphics[height=0.4\linewidth ]{figure/Introduction/blockStereo.jpg}
-\caption{The length of the curve is the same regardless of coordinate system.}
+\caption{This figure shows stone blocks that have been fabricated using digital fabrication methods \cite{ref:Rippmann2} }
 \end{figure}
 
 
@@ -279,15 +302,10 @@ It is a rather delicate geometrical problem how to cover a surface or a shell wi
 
 The important thing is that the deviations from the form  is firstly, within margins for what can be considered safe from structural point of view, and secondly and what the human eye can observe as smooth surface.The first point is obviously the most important but the second could tested.  
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=1.0\linewidth ]{figure/Introduction/meshdistort2.JPG}
-\caption{The three main types vaulting}
-\end{figure}
 
 
+There has not been much research in finding methods of estimating the brick patterns on complex shapes and surfaces. During a presentation at Harvard with John Ochsendorf from 2011 \cite{ref:interview}, who is a professor at MIT specialised in building technology of masonry structures, gets a question if there are computational methods for generation of brick tilings. According to Ochsendorf there have been attempts to make computational methods that generates brick patterns but without much success, and that he rather believed in experience and intuition of the craftsmen to understand the limits and possibilities for different tiling. He highlights the skills and knowledge that has been lost in this field compared to what The Guastavino Company managed to construct in the beginning of the 20th century.Rather using traditional vaulting as the finishing layer the visible patterns were tiled from beneath. \textit{Following the success of the City hall Station(1904) and St Paul's Chapel in New York in the early 1900s, the Fuastavino company built increasingly sophisticated decorative patterns in its vaulting. This was accomplished by adding the exposed layer of tile last. In other words, masons constructured the vaulting with a rough interior finish, and then applied a final decorative  layer of tile from below.}\cite{ref:Ochsendorf}.
 
-There has not been much research in finding methods of estimating the brick patterns on complex shapes and surfaces. During a presentation at Harvard with John Ochsendorf from 2011 \cite{ref:interview}, who is a professor at MIT specialised in building technology of masonry structures, gets a question if there are computational methods for generation of brick tilings. According to Ochsendorf there have been attempts to make computational methods that generates brick patterns but without much success, and that he rather believed in experience and intuition of the craftsmen to understand the limits and possibilities for different tiling. He highlights the skills and knowledge that has been lost in this field compared to what The Guastavino Company managed to construct in the beginning of the 20th century.Rather using traditional vaulting as the finishing layer the visible patterns were tiled from beneath. \textit{Following the success of the City hall Station(1904) and St Paul's Chapel in New York in the early 1900s, the Fuastavino company built increasingly sophisticated decorative patterns in its vaulting. This was accomplished by adding the exposed layer of tile last. In other words, masons constructured the vaulting with a rough interior finish, and then applied a final decorative  layer of tile from below.}\cite{ref:Ochsendorf}. This is
 
 
 
@@ -295,33 +313,25 @@ There has not been much research in finding methods of estimating the brick patt
 
 \subsection{Brick patterns on traditional vaults}
 
-Reading old masonry handbooks \cite{ref:murning} one can find patterns for traditional vault or shell forms , as described in section \ref{sec:masonryShells}. It is though hard to find records on these have been generated or estimated, and sometimes there are different alternatives patterns for the same form. 
+Reading old masonry handbooks \cite{ref:murning} one can find patterns for traditional vault or shell forms , as described in section \ref{sec:masonryShells}. It is though hard to find records on these have been generated or estimated, and sometimes there are different alternatives of patterns for the same form. Sometimes there are cultural traditions in how one tessellates the vault which results in different patterns in different countries. \cite{ref:Heyman}.  Below is an illustration that shows the brick patterns and guidelines for a Cavetto vault and a Saucer dome from a Swedish handbook.  More pictures and examples can be seen in appendix ??
 
 \begin{figure}[H]
 \centering
-\includegraphics[height=0.8\linewidth ]{figure/Introduction/vaultin2.pdf}
-\caption{The three main types vaulting}
+\includegraphics[height=1.0\linewidth ]{figure/Introduction/vaultin2.pdf}
+\caption{It is possible to find records of how to tesselate traditional vaults with bricks.This illustration shows the brick patterns and guidelines for a Cavetto vault, top, and a Saucer dome below \cite{ref:murning}}
 \end{figure}
 
-
-\begin{figure}[H]
-\centering
-\includegraphics[height=0.60\linewidth ]{figure/Introduction/vaulting1.pdf}
-\includegraphics[height=0.60\linewidth ]{figure/Introduction/vaulting3.pdf}
-\caption{The three main types vaulting}
-\end{figure}
-
-  
 
 \subsection{Brick Structures}
 
-What is typical for a brick structure is uniformity of its building elements, the brick. The brick is made of clay can be formed into nearly any shape, but the most common format is the cuboid. The way the brick is made affects its colour, shape, texture, strength, Resistance to fire and weather and longevity. This means that strangely enough both the diversity and the unity are the most striking features of the structure. Looking at a traditional building the brick composition becomes a patchwork of different colours, the shape has small deviations due to imperfections of the shape and the roughness of the texture. Even though we have modern techniques and methods to make the colours, shape and texture uniform it is mostly common to keep or resemble these imperfections.\\
-Two other important aspects of a brick structure is the mortar and the skills and creativity of the craftsman. The mortars main purpose is to bond the bricks together into a structure and to evenly distribute the stress and compensate the differences of the bricks. 
+What is typical for a brick structure is uniformity of its building elements, the brick. The brick is made of clay can be formed into nearly any shape, but the most common format is the cuboid. The way the brick is made affects its colour, shape, texture, strength, resistance to fire and weather and longevity\cite{BrickHistory}. Strangely enough both the diversity and the unity can be seen as the most prominent features of a brick structure. Looking at a traditional building the brick composition becomes a patchwork of different colours, the shape has small deviations due to imperfections of the shape and the roughness of the texture, in figure \ref{fig:Rhösska} one can see the wide color range of a brick facade. Even though we have modern techniques and methods to make the colours, shape and texture uniform it is mostly common to keep or resemble these imperfections.\\
+Two other important components of a brick structure is the mortar and the skills of the craftsman. The mortars main purpose is to bond the bricks together into a structure and to evenly distribute the stress and compensate the differences of the bricks \cite{ref:Pfeifer}. 
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=1.0\linewidth ]{figure/Introduction/Rohsska.jpg}
-\caption{Rhösska museum in Gothenburg.}
+\caption{Rhösska museum in Gothenburg, a structure that shows the range of colors of a brick facade.}
+\label{fig:Rhösska}
 \end{figure}
 
 
@@ -337,7 +347,7 @@ Two other important aspects of a brick structure is the mortar and the skills an
 \begin{table}[H]
     \centering
     \includegraphics[width=0.7\linewidth ]{figure/Introduction/clays.pdf}
-    \caption{ A table that shows the chemical composition types of .  Remake of table in   \cite{ref:Mitchell}}
+    \caption{ A table that shows the chemical composition of different types of brick clay.   \cite{ref:Mitchell}}
     \label{tab:my_label}
 \end{table}
 
@@ -364,8 +374,7 @@ The brick composition has common terminology and the name of the brick sides are
 
 \subsubsection{Material Properties}
 
-Bricks belongs to the group of materials called ceramics. Bricks are made
-There are some general properties that applies to clay based ceramic materials.\\
+Bricks belongs to the group of materials called ceramics. There are some general properties that applies to clay based ceramic materials.\cite{ref:byggmaterial} \\
 
 \begin{itemize}
 \item Hard and brittle
@@ -378,7 +387,7 @@ i.e. no deformations related to heat and moisture.
 \item High electrical resistivity  (elektriskt isolerande)
 \end{itemize}
 
-The mechanical of physical properties of bricks are that they are very favourable under pure compression. The very high compressive strength is in contradiction to it tensile and flexural capacity. 
+The mechanical of physical properties of bricks are that they are very favourable under pure compression and unfavourable. The very high compressive strength is in contradiction to it tensile and flexural capacity. The graphs below to the left shows the compressive strenth relates the the flexural strength and the modulus of elasticity.  
 
 \begin{figure}[H]
 \centering
@@ -387,7 +396,8 @@ The mechanical of physical properties of bricks are that they are very favourabl
 \caption{Two graphs that shows the mechanical properties of bricks. These pictures are remakes from\cite{ref:byggmaterial} }
 \end{figure}
 
-Notice the very low Elasticity modulus compared to for instance steel which could go well over 200 GPa, the table below shows the elasticity modulus of various materials.
+Notice the very low Elasticity modulus compared to for instance steel which could go well over 200 GPa, the table below shows the elasticity modulus of brick compares to other materials.
+
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.9\linewidth ]{figure/Introduction/elastictymodulus.pdf}
@@ -395,8 +405,7 @@ Notice the very low Elasticity modulus compared to for instance steel which coul
 \end{figure}
 
 
-
-The exact properties are much related to the composition of the raw material and the kiln temperature. The graph below shows how for instance the density and the pore properties change with the temperature.
+The properties of bricks are very much controlled and related to the composition of the raw material and the kiln temperature. This give the possibility to design the brick for the right circumstances and demands during the fabrication process, which can result and in a wide range of different bricks. The graph below shows how for instance the density and the pore properties change with the temperature.\cite{ref:byggmaterial}
 
 \begin{figure}[H]
 \centering
@@ -427,12 +436,12 @@ The forming of the bricks is a quite an important step for the format of the bri
     \item The machine-made pressed, or hand moulded, figure \ref{fig:mould}
 \end{enumerate}
 
-The wire-cut bricks usually get very precise and smooth surface, the look is quite industrial. The pressed or moulded bricks can get quite rough and the shape is usually a little bowed, curved or twisted. Worth mentioning that this is not a problem due to the adaptability of the mortar joints. 
+The wire-cut bricks usually get very precise and smooth surface, the look is quite industrial. The pressed or moulded bricks can get quite rough and the shape is usually a little bowed, curved or twisted. The deformations is in general not a problem due to the adaptability for tolerances of the mortar joints. The deformations should though not be greater than the joints allows. ref(pappa)
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.9\linewidth ]{figure/Theory/wireBrick.jpg}
-\caption{An industrialised way of making bricks using a wire-cutter\cite{ref:tegel}}
+\caption{An industrialised way of making bricks using a wire-cutter. This results in concise and precise forms of the brick with less deformations. The feeling of these bricks are usually more industrial.\cite{ref:tegel}}
 \label{fig:wire}
 \end{figure}
 
@@ -441,13 +450,11 @@ The wire-cut bricks usually get very precise and smooth surface, the look is qui
 \includegraphics[width=0.3\linewidth ]{figure/Theory/brickmaking2a.jpg}
 \includegraphics[width=0.3\linewidth ]{figure/Theory/brickmaking1.jpg}
 \includegraphics[width=0.3\linewidth ]{figure/Theory/brickmaking2b.jpg}
-\caption{A traditional method of brick making is by putting it into wooden forms. Today this is not very common and the bricks are usually pressed by a machine. \cite{ref:tegel}}
+\caption{A traditional method of brick making is by putting it into wooden forms. Today this is not very common and the bricks are usually pressed by a machine. This method gives the brick marks of the form and also results in some deformation and transformations from the cuboid. The deformations is in general not a problem due to the adaptability for tolerances of the mortar joints.This method is more in line with traditional brick making then the wire-cutting method.  \cite{ref:tegel}}
 \label{fig:mould}
 \end{figure}
 
 There are some different kinds of kilns. The principles are though the same even though they can be constructed differently. Below is a figure describing a tunnel kiln and the different stages of the process.
-
-
 
 
 \begin{figure}[H]
@@ -491,13 +498,22 @@ What differs the brick layer from other crafts is the pure simplicity, not much 
 \caption{Typical tools for a brick layer from a Swedish  brick layer handbook from 1938. 1)Plumb 2)spatula(looks like a 9) 3)spirit level 4)Wooden jointer 5)Hammer for brick cutting  \cite{ref:murning}}
 \end{figure}
 
-With the spatula the brick layer applies just enough mortar to make the brick attach to the underlying brick and assures the bed joint height is level.It is also important to apply enough mortar and pressure in the placement of the vertical joint,figure \ref{fig:murning2}  The hammer is used to cut the stones for situations where the normal format does not fit, it can be at corners or vaults.
+With the spatula the brick layer applies just enough mortar to make the brick attach to the underlying brick and assures the bed joint height is level.It is also important to apply enough mortar and pressure in the placement of the vertical joint,figure \ref{fig:murning2}  The hammer is used to cut the stones for situations where the normal format does not fit, it can be at corners or vaults. A brick layer always works within inline with the bedding layer so the brick is always cut in the vertical direction.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.80\linewidth ]{figure/Introduction/vaultingbrick2.pdf}
+\caption{An illustration showing how bricklayers are allowed to use the hammer to change the shape of the brick to fit the construction requirements.\cite{ref:murning}}
+\label{fig:murning3}
+\end{figure}
+
+
 The most common technique of keeping the brick level is to work with a cord attached between two corners sticks, figure \ref{fig:murning}. This they due whenever possible  to do so. When not possible a brick layer must be able to work with only a spirit level and plump to keep ensure the geometrical entities level,figure \ref{fig:murning2}. The working stages is illustrated in the illustrations below.  
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.40\linewidth ]{figure/Introduction/bricklay4.pdf}
-\caption{The length of the curve is the same regardless of coordinate system.\cite{ref:murning}}
+\caption{The bricks should all be level in the horisonatal direction. The most common way to achieve this is to use string that is attached between to rods.\cite{ref:murning}}
 \label{fig:murning}
 \end{figure}
 
@@ -505,7 +521,7 @@ The most common technique of keeping the brick level is to work with a cord atta
 \centering
 \includegraphics[width=0.45\linewidth ]{figure/Introduction/bricklayer2.pdf}
 \includegraphics[width=0.45\linewidth ]{figure/Introduction/bricklayer1.pdf}
-\caption{The length of the curve is the same regardless of coordinate system.\cite{ref:murning}}
+\caption{To the left one can see how the bricklayer uses a spatula to apply mortar to both the brick and the place of the brick. To the right one can see how the brick layer can use both the spirit level and a plumb to ensure geometrical correctness\cite{ref:murning}}
 \label{fig:murning2}
 \end{figure}
 
@@ -516,7 +532,7 @@ There have not been many alternatives to this quite traditional way of bricklayi
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\linewidth ]{figure/Introduction/RobotBrick.jpg}
-\caption{ETH Brick Robot}
+\caption{This illustrates an experiment by ETH using a industrial robot for placing brick in brick composition. This can result in quite complex patterns of the brick wall.}
 \end{figure}
 
 
@@ -540,7 +556,7 @@ An important part of design is the physical realization of the drawings. The vau
 \end{figure}
 
 
-The European path includes vaulting techniques from time eras such as Roman, Romanesque, Gothic and Renaissance. The common factor for them is that they usually are based on a circle, such as barrel vault, and they often require temporary centering or form work to stabilise the construction until the vault is finished. They are often relatively thick and they the bricks often follow the radial lines \cite{ref:Dieste}. Looking at the vaults and brick patterns and vaults in section \ref{sec:brickPatt} and \ref{sec:masonryShells} ,which are from a Swedish textbook, proves that the technique evolved with time, and to reduce the weight special bricks which are lighter than normal bricks \cite{ref:murning}. This can be seen in pictures where the form-work is only partial and the bricks are only kept in place by the mortar, which is is not possible with solid bricks. In figure \ref{fig:kryssvalv}a),  one can see the construction of a brick vault. Until the beginning of the 20th century it was required of a Swedish brick layers to by them self raise a vault with only a wooden template telling the curvature\cite{ref:murning}, as in figure \ref{fig:kryssvalv}b). This tells how dependent the end result was based on the intuition and experience of the brick layer. Unfortunately this knowledge is since long gone, or it is a talent of very few, these days.
+The European path includes vaulting techniques from time eras such as Roman, Romanesque, Gothic and Renaissance. The common factor for them is that they usually are based on a circle, such as barrel vault, and they often require temporary centering or form work to stabilise the construction until the vault is finished. They are often relatively thick and they the bricks often follow the radial lines \cite{ref:Dieste}. Looking at the vaults and brick patterns and vaults in section \ref{sec:brickPatt} and \ref{sec:masonryShells} ,which are from a Swedish textbook, proves that the technique evolved with time, and to reduce the weight special bricks which are lighter than normal bricks \cite{ref:murning}. This can be seen in pictures where the form-work is only partial and the bricks are only kept in place by the mortar, which is is not possible with solid bricks. In figure \ref{fig:kryssvalv}a),  one can see the construction of a brick vault. Until the beginning of the 20th century it was required of a Swedish brick layers to by them self raise a vault with only a wooden template telling the curvature\cite{ref:murning}, as in figure \ref{fig:kryssvalv}b). This tells how dependent the end result was based on the intuition and experience of the brick layer. This knowledge is to some extent now longer available, or it is a talent of very few, these days.
 
 \begin{figure}[H]
 \centering
@@ -591,24 +607,22 @@ There are different methods that applies to form-finding. In recent years with m
 
 \subsubsection{Graphical Methods}
 
-The most basic type, but not less powerful, of form finding is graphical methods. A type of these is called \textit{graphic static} or \textit{force polygon method}. This method can be used to seek a form of equilibrium or analysing already designed structural members such as trusses. The method originates from the work of \textit{Karl Culmann} published in \textit{Die graphische statik} in 1866.This method have had much influence for modern structural design in the late 19th century and early 20th century and was used by modern structural pioneers such as \textit{Rafael Guastavino,Antoni Gaudi,Felix Candela} and \textit{Robert Maillart}. 
+The most basic type, but not less powerful, of form finding is graphical methods. A type of these is called \textit{graphic static} or \textit{force polygon method}. This method can be used to seek a form of equilibrium such as arches or analysing already designed structural members such as trusses. The method originates from the work of \textit{Karl Culmann} published in \textit{Die graphische statik} in 1866.This method have had much influence for modern structural design in the late 19th century and early 20th century and was used by modern structural pioneers such as \textit{Rafael Guastavino,Antoni Gaudi,Felix Candela} and \textit{Robert Maillart}. \cite{ref:Form} Below is an example for a vault consisting of different shaped blocks.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.6\linewidth ]{figure/Introduction/GraphStat4.JPG}
-\caption{Compression-only Form finding through Finite Subdivision of the
-Force Polygon\cite{ref:Form} }
+\includegraphics[width=0.8\linewidth ]{figure/Introduction/GraphStat4.JPG}
+\caption{This picture illustrates graphic statics applied to vault with differently shaped elements. To the right on can see triangles forming of the internal and external forces which illustrates equilibrium.\cite{ref:Form} }
 \end{figure}
 
-The main idea is to use work in this force polygons which are represented in what is called a reciprocal force diagram. These polygons should always be closed to ensure that the forces are in equilibrium. In the example below, from the book Form and Forces, it illustrates a hanging cable where the internal forces and global forces are constructed as triangles, and since they are closed polygons the structure is in equilibrium. The powerful aspect of graphic statics is the illustrative way of expressing the force connections and how the design relates the force patterns.   
+The main idea is to use work in this force polygons which are represented in what is called a reciprocal force diagram. These polygons should always be closed to ensure that the forces are in equilibrium. In the example below it illustrates a hanging cable where the internal forces and global forces are constructed as triangles, and since they are closed polygons the structure is in equilibrium. The powerful aspect of graphic statics is the illustrative way of expressing the force connections and how the design relates the force patterns.   
 
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.6\linewidth ]{figure/Introduction/GraphStat2.JPG}
 \includegraphics[width=0.35\linewidth ]{figure/Introduction/GraphStat3.JPG}
-\caption{Compression-only Form finding through Finite Subdivision of the
-Force Polygon \cite{ref:Form} }
+\caption{Example of graphic statics applied to a hanging cable. Figure to the left shows the collected force polygons and how they relate to the internal forces of the hanging cable. To the right on can see the global equilibrium illustrated. \cite{ref:Form} }
 \end{figure}
 
 
@@ -620,7 +634,7 @@ You might also read \textit{ Tensile Structures Volume 2,  Cable nets} by Frei O
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.6\linewidth ]{figure/Introduction/constantShell.pdf}
-\caption{Constant stress shells of derived analytically by Chris Willams. }
+\caption{Constant stress shells of derived analytically. To derive forms of analytically can be very challenging and the use in more complex projects can be limited.\cite{ref:ShellOpt} }
 \end{figure}
 
 
@@ -630,7 +644,7 @@ Using physical models to understand and communicate design has been a vital part
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.6\linewidth ]{figure/Theory/Soap.jpg}
-\caption{The tangent differs depending of which direction you refer to. }
+\caption{Soap-film experiment to achieve minimal surfaces from the research of Frei Otto }
 \end{figure}
 
 Today this is mostly a done by architects communicating their design and understand geometrical affects on spaces. Even though physical models and testing is one of most optimal ways to validate theory it is no longer part of the structural engineering culture to do so. The need for physical models can be for various reasons.\textit{ 
@@ -669,11 +683,17 @@ This template is of course a bit rough and there is a big diversity of solvers, 
 \item \textit{Dynamic Equilibrium Methods}, these methods have a dynamic based equilibrium condition, i.e the second Law of Newton $\sum F = ma$ which is different compared to statics where the sum of forces always are equal to zero. Examples of these methods are \textit{Dynamic Relaxation(DR)} and \textit{Particle-Spring(PS)} systems. You can read further about DR in section \ref{DR}. The figure \ref{fig:DR} can give an idea of how a DR or PS can behave for a quadratic mesh fixed in the corners. 
 \end{enumerate}
 
-\subsection{Computational Design in Architecture}
+\subsection{Computation in Architecture}
 
-Design in architecture often refers to creative design process where you explore different options related to specific task or conditions. The term "Thinking outside the box" is somewhat positive in the modern architecture in aspiration of new architecture. Computers on the other hand are bound to think inside the box based on logic rules.Though they are much more efficient in handling data and calculations then we humans do. Computational design can be seen as the merge of these two design concepts, thinking outside the box inside the box. The combination makes it possible to solve difficult problems that demands huge computational power or generate designs hard to imagine beforehand. 
+Design in architecture often refers to creative design process where you explore different options related to specific design situation. Design situation meaning a certain objective or scope that should be applied at specific cite. Ever since we started to think the city as combination of many different components and parameters that interact with each other the field of design has become more complex, and in a sense more important. The field of Computational Design can be seen as a design process partly, or entirely, driven and influenced by computational methods. Given such a wide formulation it can include many types inputs or outputs to drive the design. Some different fields can be assigned
 
-Offices  that was early in defining units specialized in computational design and complex problem are \textit{Foster and Partners},\textit{ Arup} and \textit{Buro Happold}. Today there are more offices and academic institutes that specializes in this area.
+\begin{enumerate}
+\item \textit{Gathering and Visualisation of data} - When given complex situations with many different parameters one might need both to gather large sets of data and visualise it in a comprehensible that will be the foundation of decision making. It can also be used to visualise and simulate certain scenarios and impacts by ones design. 
+\item \textit{Generation of multiple solutions} -  Given certain constraints of the objective and cite one can generate a wide range of solutions, some that might have been hard to imagine.
+\item \textit{Optimisation of single or multiple parameters} - This is a field of behaviour based design where the one can optimise certain aspects of the performance of the design. It can optimised for structural or thermal efficiency to mention a couple of parameters.
+\end{enumerate}
+
+Common for computational methods is that they are driven by algorithms and logical statements. The design is not only what we traditionally mean by design but more a design of algorithms and programmable scripts that generates the . This relatively new design paradigm has emerged since the late eighties and nineties. Offices  that was early in defining units specialized in computational design and complex problem are \textit{Foster and Partners},\textit{ Arup} and \textit{Buro Happold}. Today there are more offices and academic institutes that specializes in this area ICD in Stuttgart and IAAC in Barcelona.
 
 \begin{figure}[H]
 \centering
@@ -758,31 +778,3 @@ A possible research question would be to develop a software for parametric envir
 \end{figure}
 
 
-\section{Purpose} 
-The  purpose of this thesis is to investigate the possibility of using the concepts of differential geometry to generate the patterns for bricklaying on compressive shell forms. The report will integrate the fields theory of differential geometry, theory of shells, theory of masonry structures and computational methods. The theoretical framework will therefore be divided in four parts:\\
-\begin{enumerate}
-    \item \textit{Theory structural masonry} - This will be based on a plastic design approach used for assessment and understanding of complex historical masonry structures such as cathedrals. The theory differs from traditional structural engineering practice due to the nature of the masonry composition where stresses in structure cannot be read in the same way.   
-    \item \textit{Differential geometry} - This section will explore the basics of differential geometry which includes the elementary theory related to curves and surfaces. This is a necessity for understanding the theory of free-form shells. The part will also include parts that are not directly related but can be confusing if not explained, for instances there are different types of curvature for surfaces and curves and it is necessary not to mix them up.
-    \item \textit{Theory of free-form membrane shells} - This section will describe the theory of free-form shells in a approach understandable for the structural engineer. This complex theory is usually used by mechanical engineers and no attempts has been done to explain in the concepts for the structural engineer.
-    \item \textit{Computational methods} - This section will explain how computational methods can be used to find solutions when the analytical solutions based on the theory above can´t or is very hard to achieve.
-\end{enumerate}
-
-
-\section{Limitations} \label{Section_ref}
-
-This report will only concern brick structures, meaning module blocks with the same dimensions, and not other types of masonry structures such as stone or concrete. The structural theory though applies to all masonry structures. The report will concern compressive brick shell structures and not conventional brick structures. Compression structures meaning in this case structures where the form ensures equilibrium in compressive axial forces and where reinforcement is not necessary in theory. The forms generated are of conceptual nature meaning that no detailed calculations or instability checks are made, such as buckling. \\ 
-
-The implementations will be programmed in a parametric development environment,but no effort will be made to develop and evaluate different parametric design processes. The code will be implemented using the object-oriented language C\#. The methods are though general and should be possible to implement using most languages. 
-
-\section{Method} \label{Sec:method}
-
-Below is a description a process and its  different stages that will be the guide of the work of this thesis.
-
-\begin{enumerate}
-
-\item \textit{A literature review} will be executed which investigates historical and new knowledge and research in the fields related to masonry structures: tessellation and geometry,form and function, production  and computational methods. The literature review will be the foundation that with a contextual view of different areas crystallizes into a research question.
-\item \textit{ An in depth theoretical study and gathering} will be done in fields coinciding with relevance for the research question developed in previous stage and the limitations made.  
-\item From the theoretical foundation \textit{a process or method} will be made as a possible way of achieve or answer the research question made.
-\item The method will be implemented and the results will be presented. The results will be the foundation of a \textit{discussion} that reviews the method and the validity of the results.
-\item A list of possible areas of improvements and possible future research will be presented.
-\end{enumerate}

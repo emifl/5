@@ -5,7 +5,7 @@ In the following sections, examples of a figure, an equation, a table, a chemica
 
 \section{Structural theory of masonry structures}
 
-Masonry is a composition or assemblage of building elements. The most common types of these elements are stones and bricks. It can though be in any shape it can be done with or without mortar but the structural action is similar. According to Heyman it is wise to and convenient to regard a masonry building as a collection of dry stones or bricks that are placed on one another to to form a stable structure. The mortar cannot be accounted since it may have reduced its structural influence with time - it cannot be assumed to add strength to the construction. The stability of the structure relies on the compaction under the gravity of its components. "A general state of compressive stress exists, but only feeble tensions can be resisted."\\
+Masonry is a composition or assemblage of building elements. The most common types of these elements are stones and bricks. It can though be in any shape it can be done with or without mortar but the structural action is similar. According to Heyman \cite{ref:Heyman} it is wise to and convenient to regard a masonry building as a collection of dry stones or bricks that are placed on one another to to form a stable structure. The mortar cannot be accounted since it may have reduced its structural influence with time - it cannot be assumed to add strength to the construction. The stability of the structure relies on the compaction under the gravity of its components. "A general state of compressive stress exists, but only feeble tensions can be resisted."\\
 
 \subsection{Structural design}
 Speaking in terms of general design there are three main structural criterion's, those of \textit{strength, stiffness and stability}. The first implies that the material should resist the internal stresses and the second ensures not to high deflections. These criterion's are not the crucial regarding masonry structures, it is the stability that is of most concern.\\
@@ -33,12 +33,12 @@ This will be described more in detail later. Important to understand that the hi
 \begin{figure}[H] 
 \centering
 \includegraphics[width=0.5\linewidth ]{figure/Theory/cracksHeyman.pdf}
-\caption{Collapse mechanism of masonry vault by an asymmetric load}
+\caption{\cite{ref:Heyman}}
 \end{figure}
 
-\subsection{Limit Design Principles}
+\subsection{Limit Design Principles} \label{sec:limit}
 
-The limit design principles Heyman purposes for masonry is similar to the ones used is similar to the plastic hinge theory used for plastic design of steel frames. This implies that hinges formed causes the structure to become a mechanism. To be able to apply the same theory and theorems for masonry structures Heyman makes three assumptions for the properties of the material:\\
+The limit design principles Heyman purposes for masonry is similar to the ones used is similar to the plastic hinge theory used for plastic design of steel frames. This implies that hinges formed causes the structure to become a mechanism. To be able to apply the same theory and theorems for masonry structures Heyman makes three assumptions for the properties of the material:\cite{ref:Heyman2}\\
 
 
 
@@ -51,21 +51,19 @@ and with the corollaries of the general principles established below, a safe ass
 It may be slightly too safe if the stone structure is not of the voussoir type, and if tensile
 forces can be transmitted by the interlocking of perhaps randomly oriented stones.}
 
-\textit{(ii) The general stress levels are so low that, for the purposes of calculation, the compressive
-strength of stone is effectively infinite. This is a slightly unsafe assumption, and
-will be discussed more fully later.}
+\textit{(ii) The general stress levels are so low that, for the purposes of calculation, the compressive strength of stone is effectively infinite. }
 
 \textit{(iii) Sliding of one stone upon another cannot occur. This seems a reasonable assumption
 (it did to Coulomb, as noted above). It implies that wherever there is a weak plane, for
 example between voussoirs, the line of thrust should not depart too far from normality
-to that plane. (The collapse of Beauvais may have been initiated by sliding.)" }Stone Skeleton 660
+to that plane. (The collapse of Beauvais may have been initiated by sliding.)" }
 
 The hinges are formed when, as shown in figure \ref{fig:arch2}, when the line of thrust cannot contain itself inside the geometry. A thrust that follows the centre line of the structure results in pure axial forces, and when moving outside it results in a minor moment that until a certain point that will be negligible due to the compression of the self weight.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.9\linewidth ]{figure/Theory/Plasticity.pdf}
-\caption{Limit condition for masonry voussoirs}
+\caption{Limit condition for masonry voussoirs \cite{ref:Heyman2}}
 \end{figure}
 
 This represents a block of infinite stress capacity since a normal stone or brick would crush when the contact area gets to small. Therefore there are some safety factors that need to be applied.
@@ -73,12 +71,28 @@ This represents a block of infinite stress capacity since a normal stone or bric
 
 \subsubsection{Safety factor}
 
+Safety measurements that can be made in a conceptual design stage of masonry structure are:
+
+\begin{enumerate}
+\item The middle third rule
+\item Maximum and Minimum Trust
+\end{enumerate}
+
+As stated previously in section \ref{sec:limit} a masonry structure is assumed to zero tensile capacity. Therefore one seeks a structural solution where the line of thrust lies in the center line of the cross section, which implies an ideal uni-formal compressional stress distribution along the cross section. The important aspect is though that their should be no tensile stress distribution on the cross section. A rule that can be applied to ensure no tensile stress is that the resultant force should be within the middle third of the cross section, see figure below. Going outside the middle third one will get a part of the cross section with a tensile force component and the risk of forming plastic hinges.  
+
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.9\linewidth ]{figure/Theory/Safety.pdf}
 \caption{This shows the middle third rule applied to a block. redrawn from Block...}
 \end{figure}
 
+According to the theory of plasticity the line for thrust can take many different shapes. One can illustrate the range of within these solutions can occur saying that there is a maximum and minimum thrust that encapsulate all possibilities. Going outside of the minimum and maximum thrust plastic hinges will form. A very small range say that the minimum and maximum thrust is almost the same it gives small tolerances for settlements affecting the boundary conditions of the structure. A measure of safety is then how much the foundation and boundary of the structure can change without forming dangeroues hinges for the structure.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\linewidth ]{figure/Theory/minmaxthrust.pdf}
+\caption{This shows the middle third rule applied to a block. redrawn from Block...}
+\end{figure}
 
 \subsection{Plasticty theorems}
 \subsubsection{Lower Bound Theory}
@@ -145,7 +159,7 @@ There are many examples of Curves and most of you have used various of them. Com
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.9\linewidth ]{figure/Theory/CurveExample.pdf}  \caption{Example of Curves, Presley }
+\includegraphics[width=0.9\linewidth ]{figure/Theory/CurveExample.pdf}  \caption{Example of Curves of curves in cartesian coordinates.\cite{ref:Presley} }
 \end{figure}
 
 Using this notation means that you describe them in a Cartesian equation $f(x,y) = c$
@@ -161,7 +175,7 @@ It is sometimes more efficient to describe curves in another way, as a parametri
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.7\linewidth ]{figure/Theory/CurveInSpace.pdf}              
-\caption{The geometry of the curve, from Presley }
+\caption{This illustration shows how the curve is constructed by a locus of points in space and how they relate to coordinate vector. To the right one can see how the position of the curve is related to a one-dimensional parameter. }
 \end{figure}
 
 Stoker describes a \textit{regular} as the locus defined by a vector
@@ -308,16 +322,12 @@ The most common surface is probably sphere which can be described in Cartesian c
 \includegraphics[width=0.4\linewidth ]{figure/Theory/sphereEx.pdf}                \caption{The tangent differs depending of which direction you refer to. }
 \end{figure}
 
-A general surface described in vector form as:
-\begin{equation}
-\textbf{r}(\theta^1,\theta^2) = x_1(\theta^1,\theta^2)\textbf{e}_1 +  x_2(\theta^1,\theta^2)\textbf{e}_2+  x_3(\theta^1,\theta^2)\textbf{e}_3
-\end{equation}
-
-Where \textbf{i},\textbf{j} and \textbf{k} are base vectors and where $\theta^1$ and $\theta^2$ are the surface coordinates.
 
 
 
-Writing the above example in this form would be:
+
+
+Writing the above example in the general form for the surface would be:
 \begin{equation}
 x_1 = R cos(\theta^1) sin (\theta^2),\quad
 x_2 = R  sin(\theta^1) cos (\theta^2),\quad
@@ -326,19 +336,23 @@ x_3 = R sin(\theta^2)
 
 \subsubsection{Geometry on a Surface}
 
-On the surface a coordinate system of curves
+To orientate on the surface one can see the surface having a mapped set of curves. These are what is called coordinate curves and are the curves that are generated when say $\theta^1$ has a constant value and $\theta^2$ is allowed to vary. In the picture below one can see a blue curve in $\mathbb{R}^3$ from the coordinates in  $\mathbb{R}^2$.
 
-To orientate and describe geometry on the surface we can use two pair of base vectors....
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth ]{figure/Theory/SurfGeo.pdf}                \caption{The tangent differs depending of which direction you refer to. }
+\end{figure}
 
-The covaraiant base vectors of the surface are:
+This type of orientation along these curves on the surface is called curve-linear coordinates. The curve linear curves has a central role in describing orientation and properties of the surface.It is important to state that we can choose the curve linear curves as we like and what fits the situation or scope one would like to examine. One can read more about and different types of curve-linear coordinates in section \ref{sec:curveLinearCoord}.\\
+To orientate and describe geometry on the surface one can use two pair of base vectors, covariant and contravariant base vectors. The covariant base vectors, $\textbf{a}_\alpha$, are the tangent vectors of the curve linear curves on the surface and they can be defined as
+
 \begin{equation} \label{convariantDiff}
  \textbf{a}_\alpha = \frac{\partial\textbf{r}}{\partial \theta^\alpha } = \frac{\partial x}{\partial \theta^\alpha }\textbf{e}_1 + \frac{\partial y}{\partial \theta^\alpha }\textbf{e}_2+\frac{\partial z}{\partial \theta^\alpha }\textbf{e}_3 = \textbf{r},_{\alpha} , for\quad \alpha = 1,2
 \end{equation}
 
 
-The covariant base vectors are rarily orthogonal to each other.
+The covariant base vectors are rarely orthogonal to each other, but they are always orthogonal to the normal of the surface and therefore lies in the tangent plane of the surface. The contravaiant base vectors, $\textbf{a}^\alpha$, also lies in the plane of the surface and are defined through the covariant base vectors.
 
-The contravaiant base vectors also lies in the plane of the surface and are defined by
 
 \begin{align}
 \textbf{a}_{\alpha} \cdot \textbf{a}^\beta = \delta^{\beta}_\alpha \\
@@ -428,7 +442,7 @@ $$s = \int { \sqrt { a_{11} \Big(\frac{d\theta^1 }{dt}\Big)^2+2a_{12}\Big(\frac{
 
 \subsubsection{Second fundamental Form}
 
-The second fundamental form is the measure of the deviation from a tangent plane, Stokes.
+The second fundamental form is the measure of how much the surface deviates from a tangent plane.\cite{ref:Stoker} It is useful property in describing the curvature of the surface.
 
 \begin{figure}[H]
 \centering
@@ -444,19 +458,17 @@ $$
 \textbf{r}(\theta^1 + d\theta^1, \theta^2 + d\theta^2)= \textbf{r}(\theta^1, \theta^2) + \textbf{r}_{,1} d\theta^1 + \textbf{r}_{,2} d\theta^2 + \frac{1}{2}(\textbf{r}_{,11}(d\theta^1)^2 + 2\textbf{r}_{,12}d\theta^1 d\theta^2 + \textbf{r}_{,11}(d\theta^2)^2) + remainder
 $$
 
-Therefore \textbf{PQ} can be described as
+Therefore the vector connecting $P$ and $Q$, \textbf{PQ}, can be described as
 $$
 \textbf{PQ} = r(\theta^1 + d\theta^1, \theta^2 + d\theta^2) - r(\theta^1, \theta^2) =  \textbf{r}_{,1} d\theta^1 + \textbf{r}_{,2} d\theta^2 + \frac{1}{2}(\textbf{r}_{,11}(d\theta^1)^2 + 2\textbf{r}_{,12}d\theta^1 d\theta^2 + \textbf{r}_{,11}(d\theta^2)^2) 
 $$
 
-Projecting PQ onto $\textbf{a}^3$ 
+Projecting $\textbf{PQ}$ onto $\textbf{a}^3$ and using the fact that $\textbf{r}_{,\alpha}\cdot\textbf{a}^3 = 0$. 
 $$
 d = \textbf{PQ}\cdot\textbf{a}^3 = \frac{1}{2}(\textbf{r}_{,11}(d\theta^1)^2 + 2\textbf{r}_{,12}d\theta^1 d\theta^2 + \textbf{r}_{,11}(d\theta^2)^2) \cdot \textbf{a}^3 
 $$
 
-This is due to $(\textbf{r}_{,1} d\theta^1 + \textbf{r}_{,2}d\theta^2)\cdot\textbf{a}^3 = 0$
-
-Recall from equation \ref{convariantDiff} that $\textbf{r}_\alpha = \textbf{a}_\alpha$ And that $a_{\alpha\beta}$ are the coefficents of the first fundamental form. In similar fashion we define the coefficents of the Second fundamental form $b_{\alpha\beta}$ 
+ Recall from equation \ref{convariantDiff} that $\textbf{r}_{,\alpha} = \textbf{a}_\alpha$ And that $a_{\alpha\beta}$ are the coefficents of the first fundamental form. In similar fashion we define the coefficents of the Second fundamental form $b_{\alpha\beta}$ 
 
 \begin{equation}
 b_{\alpha\beta} = \textbf{a}_3 \cdot \textbf{a}_{\alpha,\beta} 
@@ -466,35 +478,41 @@ Applying this the second fundamental form can be written as:
 
 $$ ~\upperRomannumeral{2} = b_{11}(d\theta^1)^2 + 2b_{12}d\theta^1 d\theta^2 + b_{22}(d\theta^2)^2 = -d\textbf{r}\cdot d\textbf{a}_3$$
 
-Reading literature by Presley, Stokes and Struik they have another definition, but it can be related like this.
+Reading literature by Presley, Stoker and Struik they have other conventions of describing the components of the second fundamental form, but it can be related like this.
 $$ e = L = b_{11} ,\quad  f= M = b_{12},\quad
  g = M = b_{22}$$
 
 
-It is appropriate to distinguish four different cases depending on the determinant
+It is appropriate to distinguish four different cases depending on the determinant of the tensor of the second fundamental form.\cite{ref:Stoker}
 
 \begin{enumerate}
-\item \textit{Elliptic case}, $ b_{11}b_{22}-b_{12}^2  > 0$ \\
-The indicatrix is an ellipse.
-\item \textit{Hyperbolic case}, $b_{11}b_{22}-b_{12}^2 < 0$ \\
-The indicatrix consists of a pair of conjugate hyoerbolas.
-\item \textit{Parabolic case}, $b_{11}b_{22}-b_{12}^2 = 0, b_{11}^2 + b_{12}^2 + b_{22}^2 \neq 0 $ \\
-Text text text.....
-\item \textit{Planar case}, $b_{12} = b_{11} = b_{22} = 0$ \\
-Text text text.....
-\end{enumerate}
-
-
+\item \textit{Elliptic Case}, $ b_{11}b_{22}-b_{12}^2  > 0$ \\
 
 \begin{figure}[H]
 \centering
-\includegraphics[width = 1\linewidth ]{figure/Theory/SecondFF2.JPG}
-\caption{http://web.mit.edu/hyperbook/Patrikalakis-Maekawa-Cho/node29.html}
+\includegraphics[height = 0.2\linewidth ]{figure/Theory/ellipticCase.pdf}
 \end{figure}
+
+\item \textit{Hyperbolic Case}, $b_{11}b_{22}-b_{12}^2 < 0$ \\
+\begin{figure}[H]
+\centering
+\includegraphics[height = 0.2\linewidth ]{figure/Theory/hyperbolicCase.pdf}
+\end{figure}
+
+
+\item \textit{Parabolic Case}, $b_{11}b_{22}-b_{12}^2 = 0, b_{11}^2 + b_{12}^2 + b_{22}^2 \neq 0 $ \\
+\begin{figure}[H]
+\centering
+\includegraphics[height = 0.2\linewidth ]{figure/Theory/parabolicCase.pdf}
+\end{figure}
+
+\item \textit{Planar Case}, $b_{12} = b_{11} = b_{22} = 0$ \\
+\end{enumerate}
+
 
 \subsubsection{Christoffel Symbols}
 
-As described previously the cordinate base vectors are dependent on the curvelinear coordinate lines, and importantly the lines do change with the surface. Therefore that means that the coordinate base vectors does change, which is a big difference to a Cartesian coordinate system where the base vectors are the same. Therefore Christoffel Symbols are defined and used to measure the rate of change from a point P to a point Q in the base vectors of P.
+As described previously the cordinate base vectors are dependent on the curvelinear coordinate curves, and importantly the curves do change with the surface. Therefore that means that the coordinate base vectors does change, which is a big difference to a Cartesian coordinate system where the base vectors are the same. Therefore Christoffel Symbols are defined and used to measure the rate of change from a point P to a point Q in the base vectors of P.
 In the book  \textit{Einstein's Theory: A Rigorous Introduction for the Mathematically Untrained}, you can read this description \textit{ "The Christoffel symbol $\Gamma^\gamma_{\alpha \beta}$, is the $\gamma$ component of the change of the coordinatebasis vector $ \textbf{a}_\beta $ by an infinitesimal coordinate displacement $ d\theta^\alpha $, per unit coordinate
 distance."} \cite{ref:Einstein}
 
@@ -504,9 +522,13 @@ With this definition:
 \Gamma^\gamma_{\alpha \beta} = \frac{\partial\textbf{a}_\beta}{\partial\theta^\alpha}\cdot \textbf{a}^\gamma
 \end{equation}
 
+This is what is called the \textit{Christoffel of the Second Kind}.This leads on defining the \textit{Christoffel of the Second Kind}.
 
-According to Williams the Christoffel symbols do not represent anything real.  
-"They give the properties of the coordinate system as lengths and directions change along the coordinate curves. They do not represent anything real, are NOT the components of a tensor and do not obey the tensor component rule under a change of coordinates." Chris Willams
+\begin{equation}
+\Gamma_{\alpha \beta \gamma} = \frac{\partial\textbf{a}_\beta}{\partial\theta^\alpha}\cdot \textbf{a}_\gamma
+\end{equation}
+
+According to the definition one is moving along one of the coordinate curves $\beta$ with respect to parameter $\alpha$, and projects the change onto coordinate vectors $\gamma$. And depending if first or second kind it is the covariant or the contravariant base vectors that the projection applies to. Since it is a scalar product the result must be a scalar. Below is a graphical interpretation of the Christoffel symbol, for both kinds. 
 
 \begin{figure}[H]
 \centering
@@ -520,26 +542,28 @@ According to Williams the Christoffel symbols do not represent anything real.
 \caption{Geometric representation of Christoffel Symbol of First kind }
 \end{figure}
 
-In 3d:
-
-\begin{equation}
- \frac{\partial\textbf{g}_i}{\partial\theta^j} = \Gamma^k_{i j} \textbf{g}_k 
-\end{equation}
-
-For a surface:
+The Christoffel symbols are necessary to describe the differentiation covaraiant and contravariant base vectors. The covariant differentiation on a surface can be defined as:
 
 \begin{equation}
     \frac{\partial\textbf{a}_\beta}{\partial\theta^\alpha} = \Gamma^\lambda_{\alpha \beta} \textbf{a}_\lambda + b_{\alpha \beta}\textbf{a}_3
 \end{equation}
 
+Notice that one needs to apply a normal component since the coordinate base vectors lie in the tangent-plane of the surface and cannot describe the changes in the normal direction. For general 3d cases it is much simpler since one can describe it much simpler:
+
+
+\begin{equation}
+ \frac{\partial\textbf{g}_i}{\partial\theta^j} = \Gamma^k_{i j} \textbf{g}_k 
+\end{equation}
+
+
+
+
 
 
 \subsubsection{Gauss-Codazzi Equations}
 
-Chris Williams states in Use of structural analogy
-generation of smooth
-surfaces for engineering
-purposes. \textit{ "The Gauss-Codazzi equations (Gauss' theorem and the
+The Gauss-Codazzi Equations means the equations of Codazzi and the one of Gauss' theorem. They are important in the sense that it tells us that the first and second fundamental forms are related.   Williams states in \textit{Use of structural analogy generation of smooth surfaces for engineering
+purposes}\cite{ref:Williams2}. \textit{ "The Gauss-Codazzi equations (Gauss' theorem and the
 Codazzi equations) are compatibility equations, which
 ensure that the coefficients of the first and second fundamental
 forms are related in such a way that the surface
@@ -548,13 +572,13 @@ forms are related in such a way that the surface
 
 
 
-In Green and Zerna you can read the following defintion of the Codazzi
+Green and Zerna\cite{ref:GreenZerna} gives the following definition of the Codazzi
 equations:
 \begin{equation}
     b_{\alpha 1}|_2 = b_{\alpha 2}|_1 
 \end{equation}
 
-In Struik we can read them as:
+Struik writes them out as following \cite{ref:Struik}:
 
 \begin{equation}
    b_{11},_2 - b_{12},_1 = b_{11} \Gamma^1_{12} + b_{12}(\Gamma^2_{12} - \Gamma^1_{11}) - b_{22}\Gamma^2_{11} 
@@ -589,9 +613,9 @@ Equation \ref{Gauss2} shows what \ref{Gauss} can be written in terms of the firs
 
 \subsubsection{Principal Curvature}
 
-The directions in the tangent plane for which $\kappa_n$ takes maximum takes maximum and minumum values are called principal directions.There are always two principal curvatures $\kappa_1$ and $\kappa_2$ and the directions are always orthogonal to each other.  Struik
+The directions in the tangent plane for which $\kappa_n$, normal curvature, takes maximum takes maximum and minumum values are called principal directions.There are always two principal curvatures $\kappa_1$ and $\kappa_2$ corresponding to the principal directions and the directions are always orthogonal to each other. \cite{ref:Struik}  
 
-The principal curvatures are the roots of the equation
+The principal curvatures are the roots of the determinant of the combined matrix of the two tensors $b_{\alpha, \beta}$ and $a_{\alpha,\beta}$, see below. \cite{ref:Pressley}
 \begin{equation}
   \begin{vmatrix} 
 b_{11} - \kappa a_{11} & b_{12} - \kappa a_{12} \\ 
@@ -600,7 +624,7 @@ b_{12} - \kappa a_{12} & b_{22} - \kappa a_{22}
 =0
 \end{equation}
 
-and the principal vectors corresponding to the principal curvature $\kappa$ are the tangent vectors $\textbf{t} = \xi \textbf{a}_1 + \eta \textbf{a}_2$
+and the principal vectors corresponding to the principal curvature $\kappa$ are the tangent vectors $\textbf{t} = \xi \textbf{a}_1 + \eta \textbf{a}_2$. \cite{ref:Pressley}
 
 \begin{equation}
 \begin{pmatrix} 
@@ -618,6 +642,7 @@ b_{12} - \kappa a_{12} & b_{22} - \kappa a_{22}
 \end{pmatrix}
 \end{equation}
 
+From the principal curvature one can calculate the normal curvature,$\kappa_n$ from the angle $\phi$, see illustration below.\cite{ref:ArchGeometry} 
 
 \begin{equation}
 \kappa_n = \kappa_1cos^2(\phi) + \kappa_2sin^2(\phi) 
@@ -634,13 +659,13 @@ b_{12} - \kappa a_{12} & b_{22} - \kappa a_{22}
 \begin{figure}[H]
 \centering
 \includegraphics[width = 0.9\linewidth ]{figure/Theory/principalCurvature.pdf}
-\caption{Scan better picture from Pottman \cite{ref:ArchGeometry}}
+\caption{Illustration of how the normal curvature, $\kappa_n$, is a function of the angle $\phi$ \cite{ref:ArchGeometry}}
 \end{figure}
 
 
 \subsubsection{Gaussian and Mean Curvature}
 
-Two measures to describe the curveature of a surface are what is called Gaussian and Mean Curvature. It can be described in the forms of the principal curvature. Both can though be written in terms of first and second fundamental form as well.
+Two measures to describe the curveature of a surface are what is called Gaussian and Mean Curvature. It can be described in the forms of the principal curvature. Both can though be written in terms of first and second fundamental form as well.  
 
 The mean curvature, $H$, is the mean curvature of the principal curvature
 \begin{equation}
@@ -654,40 +679,42 @@ principal curvatures.
 K = {\kappa_1 \kappa_2} = \frac{b_{11} b_{22} - (b_{12})^2}{a_{11}a_{22} - (a_{12})^2}
 \end{equation}
 
-The geometrical meaning of the Gaussian curvature can be seen in below.  A point of positive Gaussian curvature is a point where you have positive principal curvature in both directions as in a sphere. This is a point where you have two parabolas who's openings are directed the same way. A negative Gaussian curvature means that you have two parabolas but where they are directed in opposite directions. Zero Gaussian curvature is a result of one or both Principal curvatures are zero as in a cylinder.
+The geometrical meaning of the Gaussian curvature can be seen in below.  A point of positive Gaussian curvature is a point where you have positive principal curvature in both directions as in a sphere. This is a point where you have two parabolas who's openings are directed the same way. A negative Gaussian curvature means that you have two parabolas but where they are directed in opposite directions. Zero Gaussian curvature is a result of one or both Principal curvatures are zero as in a cylinder. 
 
 \begin{figure}[H] 
 \centering
 \includegraphics[width=1\linewidth ]{figure/Theory/GaussForms.pdf}
-\caption{pottman}
+\caption{Illustration of points on the surface with different Guassian Curvature. To the left is a sphere which has positive curvature in two directions. In the middle is a hyperparabolid which has both positive and negative curvature in its saddle point, which results in negative Gaussian curvature. To the right is the cylinder which has positive in one and zero curvature in the second direction which results in zero Gaussian curvature. }
 \end{figure}
 
-Surfaces of no Mean curvature is what we are calling minimal surfaces. Usually we define that as a surface of the smallest area spanned by a given closed space curve, even though this is not always true according to Struik. 
-A minimal surface can be produced physically by using soap film and was experimented by Frei Otto. These experiments have quite similar properties as his works in architecture. 
+Surfaces of no \textit{mean curvature} is what we are calling minimal surfaces. Usually we define that as a surface of the smallest area spanned by a given closed space curve, even though this is not always true according. \cite{ref:Struik} 
+A minimal surface can be represented physically by for instance soap film and was experimented much by Frei Otto. Much of this can be related to the forms Otto produced during his professional years. 
 
 \begin{figure}[H] 
 \centering
 \includegraphics[width=0.9\linewidth ]{figure/Theory/SoapSreeen.jpg}
-\caption{Screenshoot from a movie of Frei Ottos \cite{ref:FreiOttoSoap}}
+\caption{Screenshoot from a movie of Frei Ottos \cite{ref:FreiOttoSoap} where soap films are used to simulate minimal surfaces.}
 \end{figure}
 
-
-\begin{figure}[H] 
-\centering
-\includegraphics[width=0.9\linewidth ]{figure/Theory/FreiOtto.jpg}
-\caption{Screenshoot from a movie of Frei Ottos}
-\end{figure}
 
 
 
 \subsection{Curves on Surfaces}
 
-So far we have covered the properties of surfaces and curves somewhat separately. The properties of curves on surfaces differs, or how we describe them, a bit from the curves in  space. It is possible to relate the properties of the curve to the surface geometry, for instance you have a normal in every point of the curve. The most famous curve on the surface might for instance be the geodesic.
+So far we have covered the properties of surfaces and curves somewhat separately. The properties of curves on surfaces differs, or how we describe them, a bit from the curves in  space. It is possible to relate the properties of the curve to the surface geometry, for instance you have a surface normal in every point of the curve. The curve on the surface can therefore be described in the parameters of the surface. See equation below
+
+
+\begin{equation}
+\textbf{c}(t) =\textbf{r}(\theta^1(t),\theta^2(t))= x_1(\theta^1(t),\theta^2(t))\textbf{e}_1 +  x_2(\theta^1(t),\theta^2(t))\textbf{e}_2+  x_3(\theta^1(t),\theta^2(t))\textbf{e}_3
+\end{equation}
+
+
+The most famous examples of curves on the surface might for instance be the geodesic.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.7\linewidth ]{figure/Theory/CurveOnSurface.pdf}
-\caption{The tangent differs depending of which direction you refer to. }
+\caption{This illustration represents a curve that lies on the surface. The curve can be described through the parameters of the surface and relate its properties to the geometry of the surface. }
 \end{figure}
 
 
@@ -729,14 +756,7 @@ make if the individual boards can simply be twisted and bent along the weak axis
 \caption{Airport of Denver with a membrane structure. You can see the cutting patterns of the structure. }
 \end{figure}
 
-This chapter is dedicated for classical differential geometry of smooth surfaces. It can be worth to make an exception to point out the relations for shortest paths, or a geodesic representation, on discrete surfaces. In the picture below is a polyhedron that is built up by different elements. The transitions between these surface patches are not smooth since the their exists no normal at these boundaries. It is therefore not possible to apply the above theory. There is though possible to determine a shortest path for a line that crosses discrete surfaces. When the line crosses the  boundary the angle on each side should be the same \cite{ref:ArchGeometry}, see figure below.
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.35\linewidth ]{figure/Theory/shortpath.pdf}
-\includegraphics[width=0.35\linewidth ]{figure/Theory/shortpath2.pdf}
-\caption{\cite{ref:ArchGeometry} }
-\end{figure}
 
 
 \subsubsection{Normal and Geodesic Curvatures}
@@ -761,7 +781,7 @@ $\textit{d\textbf{t}}/ds = \kappa \textbf{n}$. This is of course true also even 
 
 One example that is importance is when the geodesic curvature is zero and the curvature is only based on the normal curvature. Those curves that fulfills those requirements are called geodesics and can be read more in detail in \ref{sec:geodesics}.
 
-\subsection{Curve Linear Coordinates On The Surface}
+\subsection{Curve Linear Coordinates On The Surface} \label{sec:curveLinearCoord}
 
 Curve linear coordinates can be illustrated as coordinate lines on the surface where the parameters $\theta^1$ and $\theta^2$ are constant. Coordinate can be said to form a net on the surface.
 Previously it has been assumed that the curve linear coordinate system has been the most basic that is of curves of constant values of parameters $\theta^1,\theta^2$. It is though possible to change the parameters as of:
@@ -984,6 +1004,7 @@ As the second key concept tells it is possible to describe the vertical equilibr
     \textbf{z}_N = \textbf{D}^{-1}_N(\textbf{p}r-\textbf{D}_F\textbf{z}_F)
 \end{equation}
 
+The solving procedure can be described as following.\cite{ref:ShellOpt} 
 
 \begin{figure}[H]
 \centering
@@ -1006,8 +1027,8 @@ Applying newtons second law it is possible to derive the equation of motion, \re
 \end{equation}
 
 
-$u(t)$ is the displacement parametrised by the time, $t$, and $\dot{u},\ddot{u}$ is first and second differentiation of $u$ with respect to time, $t$, $c$ refers to damping and $p(t)$ is the applied loading. The equation \ref{eq:motion} is referring to a single degree of freedom system that can be solved analytically. For large and complex systems this might not be possible and a numerical procedure must be applied. Dynamic relaxation is one of these types of numerical procedures and the basic concept can be described as,\textit{"The basis of the method is to trace the step by step for small time increments,$\Delta t$,the motion of each interconnected node of the grid until the structure comes to rest in static equilibrium."} \cite{ref:ShellOpt}
-
+$u(t)$ is the displacement parametrised by the time, $t$, and $\dot{u},\ddot{u}$ is first and second differentiation of $u$ with respect to time, $t$, $c$ refers to damping and $p(t)$ is the applied loading. The equation \ref{eq:motion} is referring to a single degree of freedom system that can be solved analytically. For large and complex systems this might not be possible and a numerical procedure must be applied. Dynamic relaxation is one of these types of iterative techniques using discrete time steps and the basic concept can be described as,\textit{"The basis of the method is to trace the step by step for small time increments,$\Delta t$,the motion of each interconnected node of the grid until the structure comes to rest in static equilibrium."} \cite{ref:ShellOpt}.\\
+There are different possibilities on how to structure the time steps in numerical integration schemes, such as: \textit{Symplectic Euler},\textit{ Forth Order Runge-Kutta} and \textit{Velocity Verlet Method}. For further reading and how it can be applied read \cite{ref:Poulsen}. Below is a figure describing how a plane mesh with a gravitational force finds it static equilibrium.
 
 \begin{figure}[H] 
 \centering
@@ -1024,7 +1045,7 @@ A typical flow diagram of dynamic relaxation can look like this. It is a modifie
 \caption{Flow diagram for Dynamic Relaxation, redrawn from \cite{ref:ShellOpt} }
 \end{figure}
 
-It has been commonly used in engineering to find forms of equilibrium for membrane and shell structures. For the former the DR formulation is very dependent of the internal forces and the pretension its elements or boundaries. Shells on the other hand is very dependent of the external loads and has a dominant gravity force applied.Though you can really model any kind of loading as long it imposes a force on the nodes or particles. In the thesis of 
+DR has been commonly used in engineering to find forms of equilibrium for membrane and shell structures. For the former the DR formulation is very dependent of the internal forces and the pretension its elements or boundaries. Shells on the other hand is very dependent of the external loads and has a dominant gravity force applied.Though you can really model any kind of loading as long it imposes a force on the nodes or particles. 
 
 \subsubsection{Combined form-finding and cutting patterns of tensile structures}
 
@@ -1118,7 +1139,7 @@ For an known loading it is possible to solve the axial force and the radii of th
 
 
 Shells, in which bending moments can be neglected are called membrane
-shells. Membrane theory assumes the following things:
+shells. Membrane theory is based on the following assumptions \cite{ref:Domokos}:
 
 \begin{enumerate}
 \item The material of the shell is isotropic and obeys Hooke's law.
@@ -1173,11 +1194,11 @@ The shell is subjected to external loads which is denoted by $\textbf{p}$ and is
 \end{equation}
 
 
-Equilibrium equations:
-\begin{equation}
+Equilibrium equations can then be simplified to the following as in \cite{ref:GreenZerna}:
+\begin{equation} \label{eq1}
 n^{\alpha \beta}b_{\alpha \beta} + p = 0
 \end{equation}
-\begin{equation}
+\begin{equation}\label{eq2}
 n^{\alpha \beta}|_\alpha + p^\beta = 0
 \end{equation}
 
@@ -1187,6 +1208,7 @@ Where $n^{\alpha \beta}|_\alpha$ is the covariant differentiation.
 n^{\alpha \beta}|_\alpha = n^{\alpha \beta}_{,a} + \Gamma^\beta_{\alpha \rho} n^{\alpha \rho} + \Gamma^\alpha_{\alpha \rho} n^{\rho \beta}
 \end{equation}
 
+The two equilibrium equations can be shown graphically as in the figures below.\ref{eq2} is handling the loading in the plane of the surface, and \ref{eq1} refers to the loading in the direction of the normal,see figure below.
 
 \begin{figure}[H]
 \centering
